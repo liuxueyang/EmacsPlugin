@@ -108,8 +108,8 @@
 
 ;;; ==============================
 ;;; transparent emacs
-(set-frame-parameter (selected-frame) 'alpha '(85 50))
-(add-to-list 'default-frame-alist '(alpha 85 50))
+(set-frame-parameter (selected-frame) 'alpha '(90 100))
+(add-to-list 'default-frame-alist '(alpha 90 100))
 (eval-when-compile (require 'cl))
 (defun toggle-transparency ()
   (interactive)
@@ -130,4 +130,87 @@
 ;;; ==============================
 ;;; show line number
 
+(require 'linum)
+(add-hook 'find-file-hook (lambda () (linum-mode 1)))
+(global-linum-mode 1)
+(eval-after-load 'linum
+  '(progn
+     (defface linum-leading-zero
+       `((t :inherit 'linum
+            :foreground ,(face-attribute 'linum :background nil t)))
+       "Face for displaying leading zeroes for line numbers in display margin."
+       :group 'linum)
+
+     (defun linum-format-func (line)
+       (let ((w (length
+                 (number-to-string (count-lines (point-min) (point-max))))))
+         (concat
+          (propertize (make-string (- w (length (number-to-string line))) ?0)
+                      'face 'linum-leading-zero)
+          (propertize (number-to-string line) 'face 'linum))))
+     
+     (setq linum-format 'linum-format-func)))
+
+
+(defun linum-format-func (line)
+  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+    (propertize (format (format "%%%dd " w) line) 'face 'linum)))
+(setq linum-format 'linum-format-func)
+;;; ==============================
+
+
+;;; ==============================
+;; highlighting parentheses
+(require 'highlight-parentheses)
+
+(add-hook 'lisp-mode-hook
+          '(lambda ()
+             (highlight-parentheses-mode)
+             (setq autopair-handle-action-fns
+                   (list 'autopair-default-handle-action
+                         '(lambda (action pair pos-before)
+                            (hl-paren-color-update))))))
+
+;(add-hook 'highlight-parentheses-mode-hook
+;          '(lambda ()
+;             (setq autopair-handle-action-fns
+;                   (append
+;		    (if autopair-handle-action-fns
+;			autopair-handle-action-fns
+;		      '(autopair-default-handle-action))
+;		    '((lambda (action pair pos-before)
+;			(hl-paren-color-update)))))))
+;
+(define-globalized-minor-mode global-highlight-parentheses-mode
+  highlight-parentheses-mode
+  (lambda ()
+    (highlight-parentheses-mode t)))
+(global-highlight-parentheses-mode t)
+
+;;; ==============================
+
+;;; ==============================
+;;; paredit
+;(add-to-list 'load-path "~/.emacs.d/")
+(autoload 'enable-paredit-mode "paredit"
+  "Turn on pseudo-structural editing of Lisp code."
+  t)
+
+
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+(add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+(add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-mode-hook             #'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+;;; ==============================
+
+;;; ==============================
+;;;  comments
+(defun uncomment-region (beg end)
+  "Like `comment-region' invoked with a C-u prefix arg."
+  (interactive "r")
+  (comment-region beg end -1))
 ;;; ==============================
