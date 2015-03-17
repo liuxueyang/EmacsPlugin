@@ -69,12 +69,14 @@
 
 
 
-					;(print (font-family-list))
+;					(print (font-family-list))
 
-					;(member "Inconsolata" (font-family-list))
+;					(member "monospace" (font-family-list))
 
-(when (member "Inconsolata" (font-family-list))
-  (set-face-attribute 'default nil :font "Inconsolata" :height 140))
+					; how to comment a block? This is what I want to do...
+
+(when (member "monospace" (font-family-list))
+  (set-face-attribute 'default nil :font "monospace" :height 150))
 					;(text-scale-increase 1)
 
 					;(text-scale-decrease 2)
