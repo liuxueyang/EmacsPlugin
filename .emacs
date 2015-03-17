@@ -2,6 +2,12 @@
 ;;;; 2015/02/23
 
 ;;; ==============================
+;;; slime
+
+ (setq inferior-lisp-program "/usr/bin/clisp")
+ (setq slime-contribs '(slime-fancy))
+
+;;; ==============================
 ;;; package management
 (require 'package)
 
@@ -19,12 +25,11 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 
 (require 'color-theme)
-
+(color-theme-initialize)
+(color-theme-subtle-hacker)
 
 ;;; ==============================
 ;;; col
-(add-to-list 'load-path "~/.emacs.d/rainbow-blocks")
-(color-theme-initialize)
 
 ;;; ==============================
 
@@ -39,21 +44,15 @@
 (setq show-paren-delay 0)
 (require 'paren)
 
-					;(set-face-background 'show-paren-match
-					;(face-background 'default))
-					;(set-face-foreground 'show-paren-match "#def")
-					;(set-face-attribute 'show-paren-match nil
-					; :weight 'extra-bold)
-
-
 (require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-
-
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+;
+;
+(add-to-list 'load-path "~/.emacs.d/rainbow-blocks")
 (require 'rainbow-blocks)
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
-
-
+;
+;
 ;;; ==============================
 ;;; for MELPA
 (require 'package) ;; You might already have this line
