@@ -1,32 +1,46 @@
 ;;;; This is my custom emacs file
 ;;;; 2015/02/23
 
-;;; ==============================
-;;; slime
-
- (setq inferior-lisp-program "/usr/bin/clisp")
- (setq slime-contribs '(slime-fancy))
 
 ;;; ==============================
 ;;; package management
-(require 'package)
+;;; for MELPA
+
+(require 'package) ;; You might already have this line
+
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 (add-to-list 'package-archives '("melpa"     . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
-(package-initialize)
+(package-initialize) ;; You might already have this line
 
-(unless package-archive-contents 
-  (package-refresh-contents))
+;
+(
+ ;unless package-archive-contents 
+  ;(package-refresh-contents)
+ )
+
+
 ;;; ==============================
+;;; slime
 
+(setq inferior-lisp-program "/usr/bin/clisp")
+(setq slime-contribs '(slime-fancy))
+
+;;; ==============================
 
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-subtle-hacker)
+(color-theme-gtk-ide)
 
 ;;; ==============================
 ;;; col
@@ -53,30 +67,16 @@
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
 ;
 ;
-;;; ==============================
-;;; for MELPA
-(require 'package) ;; You might already have this line
-;(add-to-list 'package-archives
-;            '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize) ;; You might already have this line
-
-;;; ==============================
-
 
 
 ;					(print (font-family-list))
 
-;					(member "monospace" (font-family-list))
+;					(member "DEC Terminal" (font-family-list))
 
 					; how to comment a block? This is what I want to do...
 
-(when (member "monospace" (font-family-list))
-  (set-face-attribute 'default nil :font "monospace" :height 150))
+(when (member "DEC Terminal" (font-family-list))
+  (set-face-attribute 'default nil :font "DEC Terminal"))
 					;(text-scale-increase 1)
 
 					;(text-scale-decrease 2)
@@ -214,4 +214,11 @@
   "Like `comment-region' invoked with a C-u prefix arg."
   (interactive "r")
   (comment-region beg end -1))
+;;; ==============================
+
+;;; ==============================
+;;; auto-complete
+;(require 'auto-complete-config)
+;(ac-config-default)
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 ;;; ==============================
