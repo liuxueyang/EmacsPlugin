@@ -35,8 +35,8 @@
 
 ;;; ==============================
 
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/color-theme")
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/color-theme")
 
 (require 'color-theme)
 (color-theme-initialize)
@@ -59,10 +59,11 @@
 (require 'paren)
 
 (require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+;(global-rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 ;
 ;
-(add-to-list 'load-path "~/.emacs.d/rainbow-blocks")
+(add-to-list 'load-path "~/.emacs.d/lisp/rainbow-blocks")
 (require 'rainbow-blocks)
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
 ;
