@@ -165,7 +165,9 @@
 (add-to-list 'default-frame-alist '(alpha 85 85))
 
 ;; --------------------
-;; slime
+;; Icicles: enhances minibuffer completion
+(require 'icicles)
+(icy-mode 1)
 
 ;; --------------------
 ;; slime
