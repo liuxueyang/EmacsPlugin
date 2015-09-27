@@ -2,4 +2,8 @@
 
 - git clone https://github.com/liuxueyang/emacsplugin.git ~/.emacs.d
 
-There are some documents for some plugins in doc directory.
+- Install Inconsolata font in Extra directory.
+
+- Enjoy Emacs.
+
+__There are some documents for some plugins in doc directory.__
