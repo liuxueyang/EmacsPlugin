@@ -197,4 +197,9 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-;; 
+
+;; --------------------
+;; Emacs::PDE
+(add-to-list 'load-path "~/.emacs.d/pde")
+(load "pde-load")
+
