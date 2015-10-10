@@ -47,6 +47,7 @@
  '(hl-fg-colors
    (quote
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(inhibit-startup-screen t)
  '(linum-format "%3d")
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
