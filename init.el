@@ -106,7 +106,8 @@
  '(rainbow-delimiters-depth-8-face ((t (:foreground "sienna"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "dark magenta"))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
- '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
+ '(rainbow-delimiters-unmatched-face ((t (:background "yellow"))))
+ '(scroll-bar ((t nil))))
 
 ;; ====================
 ;; Extra Packages ;-)
@@ -118,7 +119,8 @@
 
 ;; --------------------
 ;; slime
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(setq inferior-lisp-program "/usr/local/bin/clisp")
+;(setq inferior-lisp-program "/Applications/Clozure\ CL.app/Contents/Resources/ccl/scripts/ccl64")
 (setq slime-contribs '(slime-fancy))
 
 ;; --------------------
@@ -177,7 +179,8 @@
 (setq aw-dispatch-always t)
 
 ;; --------------------
-;;
+;; disable scroll bar
+(scroll-bar-mode -1)
 
 
 ;; --------------------
@@ -195,4 +198,9 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
-;; 
+
+;; --------------------
+;; Emacs::PDE
+(add-to-list 'load-path "~/.emacs.d/pde")
+(load "pde-load")
+
