@@ -25,3 +25,6 @@ cp -r dotconfig/tint2 ~/.config
 #### xinitrc
 cp dotconfig/xinitrc ~/.xinitrc
 
+#### xcompmgr
+sudo cp dotconfig/xcompmgr_openbox /usr/bin
+
