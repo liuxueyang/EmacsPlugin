@@ -204,3 +204,17 @@
 (add-to-list 'load-path "~/.emacs.d/pde")
 (load "pde-load")
 
+;; --------------------
+;; jdei: python environment
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'jedi:ac-setup)
+
+;; --------------------
+;; exec-path-from shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+;; --------------------
+;; jdee
+(require 'jdee)
+
