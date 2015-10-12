@@ -7,3 +7,21 @@
 - Enjoy Emacs.
 
 __There are some documents for some plugins in doc directory.__
+
+### Other Linux configuration
+
+#### conky
+cp dotconfig/conkyrc ~/.conkyrc
+
+#### openbox
+cp -r dotconfig/openbox ~/.config
+
+#### slim
+sudo cp dotconfig/slim.conf /etc/slim.conf
+
+#### tint2
+cp -r dotconfig/tint2 ~/.config
+
+#### xinitrc
+cp dotconfig/xinitrc ~/.xinitrc
+
