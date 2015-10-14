@@ -180,7 +180,7 @@
 
 ;; --------------------
 ;; disable scroll bar
-(scroll-bar-mode -1)
+; (scroll-bar-mode -1)
 
 
 ;; --------------------
@@ -217,4 +217,8 @@
 ;; --------------------
 ;; jdee
 (require 'jdee)
+
+;; --------------------
+;; java-snippets
+(require 'java-snippets)
 
