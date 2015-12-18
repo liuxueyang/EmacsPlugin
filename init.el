@@ -81,7 +81,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#2d2d2d" :foreground "#cccccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width extra-expanded :foundry "nil" :family "Inconsolata"))))
+ '(default ((t (:inherit nil :stipple nil :background "#2d2d2d" :foreground "#cccccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width extra-expanded :foundry "nil" :family "Inconsolata"))))
  '(highlight-stages-level-1-face ((t (:background "OliveDrab1"))))
  '(highlight-stages-level-2-face ((t (:background "honeydew1"))))
  '(highlight-stages-level-3-face ((t (:background "LightPink4"))))
@@ -119,9 +119,15 @@
 
 ;; --------------------
 ;; slime
-(setq inferior-lisp-program "/usr/local/bin/clisp")
+(setq inferior-lisp-program "/usr/bin/sbcl")
 ;(setq inferior-lisp-program "/Applications/Clozure\ CL.app/Contents/Resources/ccl/scripts/ccl64")
 (setq slime-contribs '(slime-fancy))
+
+;; --------------------
+;; quicklisp for slime
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")
 
 ;; --------------------
 ;; rainbow-delimiters-mode
@@ -164,8 +170,8 @@
 
 ;; --------------------
 ;; transparent
-(set-frame-parameter (selected-frame) 'alpha '(85 85))
-(add-to-list 'default-frame-alist '(alpha 85 85))
+(set-frame-parameter (selected-frame) 'alpha '(95 95))
+(add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; --------------------
 ;; Icicles: enhances minibuffer completion
@@ -221,4 +227,9 @@
 ;; --------------------
 ;; java-snippets
 (require 'java-snippets)
+
+;; --------------------
+;; pretty-lambdada
+(require 'pretty-lambdada)
+(pretty-lambda-for-modes)
 
