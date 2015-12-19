@@ -235,14 +235,25 @@
 
 ;; --------------------
 ;; AucTex
+(require 'tex)
 (load "auctex.el" nil t t)
-;(load "preview-latex.el" nil t t)
+(load "preview-latex.el" nil t t)
 (setq Tex-auto-save t)
 (setq Tex-parse-self t)
 (setq-default Tex-master nil)
+(setq TeX-PDF-mode t)
 
 ;; --------------------
 ;; latex-preview-pane
 (latex-preview-pane-enable)
+
+;; --------------------
+;; cdlatex
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
+
+;; --------------------
+;; auto-complete-auctex
+(require 'auto-complete-auctex)
 
 
