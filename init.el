@@ -233,3 +233,16 @@
 (require 'pretty-lambdada)
 (pretty-lambda-for-modes)
 
+;; --------------------
+;; AucTex
+(load "auctex.el" nil t t)
+;(load "preview-latex.el" nil t t)
+(setq Tex-auto-save t)
+(setq Tex-parse-self t)
+(setq-default Tex-master nil)
+
+;; --------------------
+;; latex-preview-pane
+(latex-preview-pane-enable)
+
+
