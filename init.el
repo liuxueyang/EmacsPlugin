@@ -242,6 +242,18 @@
 (setq Tex-parse-self t)
 (setq-default Tex-master nil)
 (setq TeX-PDF-mode t)
+(eval-after-load "tex"
+  '(progn (TeX-global-PDF-mode t)))
+(setq TeX-view-program-list
+      '(("Okular" "okular --unique %o")))
+(add-hook 'LaTeX-mode-hook (lambda()
+                             (add-to-list 'TeX-command-list
+                                          '("XeLaTeX"
+                                            "%`xelatex%(mode)%' %t"
+                                            TeX-run-TeX nil t))
+                             (setq TeX-command-default "XeLaTeX")
+                             (setq TeX-save-query  nil )
+                             (setq TeX-show-compilation t)))
 
 ;; --------------------
 ;; latex-preview-pane
