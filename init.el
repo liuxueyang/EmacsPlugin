@@ -119,15 +119,15 @@
 
 ;; --------------------
 ;; slime
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq inferior-lisp-program "/usr/bin/clisp")
 ;(setq inferior-lisp-program "/Applications/Clozure\ CL.app/Contents/Resources/ccl/scripts/ccl64")
 (setq slime-contribs '(slime-fancy))
 
 ;; --------------------
 ;; quicklisp for slime
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
-;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl")
+;; Replace "clisp" with the path to your implementation
+(setq inferior-lisp-program "clisp")
 
 ;; --------------------
 ;; rainbow-delimiters-mode
