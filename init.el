@@ -119,7 +119,7 @@
 
 ;; --------------------
 ;; slime
-(setq inferior-lisp-program "/usr/bin/clisp")
+(setq inferior-lisp-program "~/bin/clisp")
 ;(setq inferior-lisp-program "/Applications/Clozure\ CL.app/Contents/Resources/ccl/scripts/ccl64")
 (setq slime-contribs '(slime-fancy))
 
