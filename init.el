@@ -110,6 +110,17 @@
  '(scroll-bar ((t nil))))
 
 ;; ====================
+;; Extra Settings ;-)
+;; ====================
+
+;; --------------------
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "LiSu" :size 16)))
+
+;; ====================
 ;; Extra Packages ;-)
 ;; ====================
 
@@ -267,5 +278,4 @@
 ;; --------------------
 ;; auto-complete-auctex
 (require 'auto-complete-auctex)
-
 
