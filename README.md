@@ -6,6 +6,9 @@
 
 - Enjoy Emacs.
 
+![My Emacs ScreenShot](./emacs_shot.png)
+
+
 __There are some documents for some plugins in doc directory.__
 
 ### Other Linux configuration
