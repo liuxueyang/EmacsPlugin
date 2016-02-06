@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Todo.org"
+(("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string)
+ (rear-context-string . "n-on-auto-fill)\n")
+ (position . 933))
+("Todo.org"
  (filename . "~/Documents/LearningGNUEmacs/Todo.txt")
  (front-context-string)
  (rear-context-string . "。和亲密的人\n相处，更难。\n\n\n")
