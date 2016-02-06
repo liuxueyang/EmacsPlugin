@@ -10,6 +10,6 @@
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
- (rear-context-string . "		; (calendar)\n\n")
- (position . 288))
+ (rear-context-string . "n-on-auto-fill)\n")
+ (position . 933))
 )

@@ -1,0 +1,121 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/" . "home/")
+ ("/home/" . "aries/")
+ ("/home/aries/src/" . "plong/")
+ ("/home/aries/Documents/Hack/language/commonlisp/" . "ansi_commonlisp/")
+ ("/home/aries/Documents/latex/" . "newfile/")
+ ("/home/aries/Documents/Hack/language/" . "commonlisp/")
+ ("/home/aries/Documents/Hack/" . "language/")
+ ("/home/aries/Documents/LispGames/" . "ansi_commonlisp/")
+ ("/home/aries/Documents/" . "Diary/")
+ ("/home/aries/" . "Documents/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/aries/"
+ "/home/aries/Documents/"
+ "/home/aries/src/plong/"
+ "/home/aries/src/"
+ "/home/aries/Documents/Diary/"
+ "/home/aries/.emacs.d/"
+ "/home/aries/src/xelf/"
+ "/home/aries/Documents/Hack/language/commonlisp/ansi_commonlisp/"
+ "/home/aries/Documents/latex/newfile/"
+ "/home/aries/Documents/latex/Beginner/"
+ "/home/aries/Documents/latex/Picture/"
+ "/home/aries/Documents/Hack/language/latex/"
+ "/home/aries/.config/fcitx/rime/"
+ "/home/aries/Documents/Latex/"
+ "/home/aries/Downloads/"
+ "/home/aries/Documents/Scheme/"
+ "/home/aries/Documents/LispGames/ansi_commonlisp/"
+ "/home/aries/Documents/LispGames/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "Todo.org"
+ "NEWS"
+ "Diary.tex"
+ "plong.lisp"
+ "init.el"
+ "math.lisp"
+ "figure11.2.lisp"
+ "origin.tex"
+ "Diary.log"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/aries/" (22197 59547 334626 877000) ".emacs.d/" ".ido.last" ".xfce4-session.verbose-log" ".xfce4-session.verbose-log.last" ".ICEauthority" ".Xauthority" ".zsh_history" ".gphoto/" ".emacs" ".emacs~" ".ido.last~" ".viminfo" ".zshrc" "diary" ".xscreensaver" ".xsession-errors-:2" ".kingsoft/" ".steampid" ".steampath" "mydb/" ".xchat2/" ".spacemacs" "liuxueyang/" ".claws-mail/" ".FontForge/" ".kchmviewer/" "Share/" "VirtualBox VMs/" ".zcompdump-suse-5.0.5" ".zcompdump" ".dropbox-dist/" ".wine/" ".lyrics/" ".pyhistory" ".python_history" ".gitconfig" ".racket/" ".bashrc" "FoxitSoftware/" ".leechcraft/" ".aMule/" ".gtkrc-2.0-kde4" ".gtkrc-2.0" "vimwiki_html/" "vimwiki/" "src/" ".clisprc.lisp" ".sbclrc" "quicklisp/" ".oh-my-zsh/" ".slime-history.eld" ".slime/" ".purple/" ".face.icon" ".gstreamer-0.10/" ".icons/" ".themes/" ".android/" ".TeXworks/" "logs/" ".ghci" ".ghc/" ".xdvirc" ".qtodotxt.cfg" ".xemacs/" "octave-workspace" ".dosemu/" ".gemrc" ".bash_profile" ".TeXmacs/" ".octave_hist" ".rednotebook/" ".gftp/" ".tilda/" ".fonts.conf" ".directory" "GNUstep/" ".xdg_menu_cache/" ".fvwm/" ".lesshst" ".zlogin" ".profile" ".mkshrc" ".elementary/" ".gnome2_private/" ".gnome2/" ".thumbnails/" ".zsh/" ".zsh-update" ".pulse-cookie" ".steam/" ".y2usersettings" ".y2log" ".gem/" ".subversion/" ".rvm/" "Dropbox/" ".dropbox/" ".vim/" ".gnupg/" ".pki/" ".ssh/" ".recently-used" ".macromedia/" ".adobe/" ".xine/" ".presage/" ".mozilla/" ".esd_auth" ".fontconfig/" ".cache/" ".kde4/" ".dbus/" "Videos/" "Pictures/" "Music/" "Documents/" "Public/" "Templates/" "Downloads/" "Desktop/" ".xsession-errors-:0" ".xsession-errors" ".config/" ".fonts/" ".local/" "bin/" ".xinitrc.template" ".i18n" "public_html/" ".xim.template" ".inputrc" ".bash_history" "../" "./")
+
+ ("/home/aries/Documents/" (22185 45708 50697 217000) "Todo.org" "Todo.org~" "PDFs/" "dto_snippt_emacs.el" "GamesSource/" "Backup/" "Diary/" "Hack/" "src/" "Squeak/" "Books/" "Git/" "lispIRC.odt" "Octave/" "../" "./")
+
+ ("/home/" (22158 37144 962828 930000) "liu/" "mydb/" "aries/" "../" "./")
+
+ ("/usr/" (22066 33817 781918 543000) "tmp/" "src/" "x86_64-suse-linux/" "X11R6/" "games/" "sbin/" "share/" "lib64/" "include/" "lib/" "bin/" "local/" "../" "./")
+
+ ("/usr/share/" (22151 61763 279317 594000) "deadbeef/" "variety/" "quassel/" "x11vnc/" "cmus/" "asciidoc/" "cairo-clock/" "asclock/" "virtualbox/" "wxMaxima/" "libgnomeprint/" "gnome-print-2.0/" "rime-data/" "pywebkitgtk/" "deepin-music/" "cas/" "amule/" "leechcraft/" "gmpc/" "stardict-tools/" "stardict/" "wine/" "opengl-games-utils/" "dconf/" "ant/" "gnome-tweak-tool/" "anjuta/" "clutter-1.0/" "gtk-3.0/" "gnome-software/" "gnome-session/" "marco/" "empathy/" "adium/" "evolution/" "bijiben/" "evolution-data-server/" "gnome-documents/" "gnome-music/" "phonon/" "gnome-maps/" "brasero/" "purple/" "grilo-plugins/" "totem/" "polari/" "tracker/" "gtk-2.0/" "org.gnome.Weather/" "sushi/" "gnome-common/" "vinagre/" "alacarte/" "gnome-clocks/" "gnome-settings-daemon-3.0/" "gnome-settings-daemon/" "cogl/" "antler/" "orca/" "phonon4qt5/" "mate-menu/" "lightdm-gtk-greeter/" "gnome-color-manager/" "libgweather/" "yelp-tools/" "mate-screensaver/" "mate-settings-daemon/" "atril/" "caja-extensions/" "eom/" "mate-applets/" "mate-media/" "mate-power-manager/" "mate-session-manager/" "mate-terminal/" "pluma/" "orage/" "xfce4-notes-plugin/" "deja-dup/" "qt5/" "mozo/" "xgreeters/" "lightdm/" "omf/" "gnumeric/" "colord/" "apps/" "eog/" "evince/" "seahorse-nautilus/" "cryptui/" "source-highlight/" "mate-user-share/" "caja/" "lxde/" "libgnomekbd/" "liferea/" "gmixer/" "xcb/" "itstool/" "claws-mail/" "gobject-introspection-1.0/" "libquvi-scripts/" "Thunar/" "vala-0.28/" "xfce4-mixer/" "libsocialweb/" "inkscape/" "gnome-sudoku/" "mate-panel/" "mate-dictionary/" "mate-menus/" "lxpanel/" "goffice/" "gnome-nettool/" "mate-disk-usage-analyzer/" "rdesktop/" "libgnome-desktop-3.0/" "gnome-bluetooth/" "gnome-user-share/" "shotwell/" "pcmanfm-qt/" "gnome-nibbles/" "lightsoff/" "quadrapassel/" "swell-foop/" "sound-juicer/" "lxqt/" "ECM/" "aisleriot/" "gnome-chess/" "intltool/" "rage/" "quilt/" "transmission/" "xmlcharent/" "xml-commons-jaxp-1.1-apis-1.3.04/" "yudit/" "xournal/" "wayland/" "viewnior/" "tali/" "swig/" "simple-scan/" "seahorse/" "qupzilla/" "mousetweaks/" "libmatekbd/" "mate-utils/" "mate-screenshot/" "lxterminal/" "lxsession/" "lxinput/" "ltrace/" "libwacom/" "mate-dict/" "mate/" "liblouis/" "gupnp-dlna-2.0/" "gtksourceview-2.0/" "vala/" "glade/" "gdict-1.0/" "libgda-5.0/" "libfm-qt/" "ss/" "et/" "iagno/" "gupnp-av/" "gtk-engines/" "gsynaptics/" "common-lisp/" "gnuchess/" "thumbnailers/" "gnome-web-photo/" "gnome-shell/" "gnome-robots/" "gnome-packagekit/" "gnome-mines/" "gnome-mahjongg/" "gnome-klotski/" "gitweb/" "geany/" "galculator/" "four-in-a-row/" "fortune/" "five-or-more/" "file-roller/" "espeak-data/" "engrampa/" "eekboard/" "devhelp/" "cellwriter/" "caribou/" "gdm/" "autogen/" "xml-group-manager/" "xfce/" "libmateweather/" "mate-background-properties/" "gnome-video-effects/" "gnome-doc-utils/" "farstream/" "antlr-2.7.7/" "lokalize/" "kdevappwizard/" "apache2/" "php5/" "libosinfo/" "mate-control-center/" "pinpoint/" "lilypond/" "dblatex/" "sip/" "gummi/" "texstudio/" "gst-python/" "imlib2/" "kgeography/" "go/" "maxima/" "gnuplot/" "latex2html/" "cmake/" "qtodotxt/" "dosemu/" "gedit/" "racket/" "octave/" "fish/" "pstoedit/" "GraphicsMagick-1.3.21/" "ksh/" "vym/" "fontforge/" "gapi-2.0/" ".mono/" "mono-2.0/" "gftp/" "tilda/" "wqy-zenhei-fonts/" "wqy-microhei-fonts/" "wqy-bitmap-fonts/" "texmaker/" "feh/" "xfwm4/" "xfce4/" "lxdm/" "pcmanfm/" "libfm/" "lxappearance/" "tint2/" "nm-applet/" "libnm-gtk/" "edje/" "embryo/" "enlightenment/" "xmonad-0.11.1/" "awesome/" "xscreensaver/" "wmbiff/" "WindowMaker/" "WINGs/" "obconf/" "fvwm/" "elementary/" "evas/" "ethumb/" "eo/" "emotion/" "ecore_x/" "ecore/" "terminology/" "gnome-2.0/" "gnome/" "yelp/" "webkitgtk-3.0/" "vte/" "idl/" "yelp-xsl/" "comix/" "zenity/" "libtool/" "automake-1.13/" "aclocal-1.13/" "autoconf/" "bison/" "hlint-1.9.21/" "alex-3.1.4/" "happy-1.19.5/" "hscolour-1.23/" "nautilus-dropbox/" "latexila/" "gtksourceview-3.0/" "rubber/" "tlpkg/" "texmf/" "xemacs/" "gnome-control-center/" "poppler/" "color/" "backgrounds/" "xine-lib/" "javazi/" "smplayer/" "fcitx/" "presage/" "opencc/" "ffmpeg/" "postgresql94/" "git-gui/" "gitk/" "gcc-4.8/" "tcsh/" "git-core/" "cvs/" "m17n/" "vlc/" "hugin/" "mimelnk/" "mime-info/" "application-registry/" "gnome-online-accounts/" "opensuse-kiwi/" "hplip/" "sane/" "mysql/" "maven-poms/" "maven-fragments/" "maven-effective-poms/" "jvm-commmon/" "jvm/" "javadoc/" "java-utils/" "java-ext/" "java-1.8.0/" "java-1.7.0/" "java-1.6.0/" "java-1.5.0/" "marble/" "ppd/" "gutenprint/" "mozilla/" "webkitgtk-1.0/" "samba/" "netpbm/" "lua/" "grub2/" "xtermset/" "w3m/" "snmp/" "smartmontools/" "site/" "screen/" "psutils/" "mythes/" "myspell/" "hyphen/" "hunspell/" "mariadb/" "pibs/" "mibs/" "liblangtag/" "gimp/" "libexttextcat/" "joe/" "intel-gpu-tools/" "gtk-doc/" "gstreamer-0.10/" "graphviz/" "gettext/" "enscript/" "cdrdao/" "locale-langpack/" "stix-fonts/" "providers/" "libreoffice/" "lensfun/" "cups/" "libyui/" "openal/" "katepart5/" "konversation/" "tuned/" "konqsidebartng/" "kio_info/" "kconf_update/" "drkonqi/" "kcm_kscreen/" "telepathy/" "ksysguard/" "kio_desktop/" "kgamma/" "accounts/" "tcl/" "sddm-kcm/" "kf5/" "geoclue-providers/" "kstyle/" "tmac/" "media-player-info/" "kdisplay/" "qt4/" "kmix/" "knotifications5/" "kmenuedit/" "catdoc/" "kfontinst/" "kcmview1394/" "kcm_componentchooser/" "config.kcfg/" "kruler/" "remoteview/" "color-schemes/" "kpackage/" "emoticons/" "kcm_phonon/" "qca/" "kwin/" "QtCurve/" "kdm/" "games/" "kcalc/" "bluedevilwizard/" "freerdp/" "konsole/" "kxmlgui5/" "kio_bookmarks/" "java/" "purpose/" "gvfs/" "kservicetypes5/" "kde-gtk-config5/" "kcontrol/" "nls/" "kcmkeyboard/" "kpat/" "ksmserver/" "plasma/" "sddm/" "carddecks/" "kcm-gtk-module/" "gir-1.0/" "kwincompositing/" "printmanager/" "autostart/" "solid/" "systemsettings/" "kcmsolidactions/" "khotkeys/" "templates/" "libvisual/" "kio_docfilter/" "kmines/" "help/" "dict/" "kateproject/" "katexmltools/" "kcmkeys/" "kcminput/" "ksplash/" "konqueror/" "akonadi/" "kcmusb/" "gstreamer-1.0/" "mobile-broadband-provider-info/" "emacs/" "lirc/" "avahi/" "usb_modeswitch/" "sgml/" "tkpppoe/" "gdb/" "guile/" "pixmaps/" "libgphoto2/" "sounds/" "enchant/" "icewm/" "gst-plugins-base/" "desktop-data/" "vnc/" "kservices5/" "xsessions/" "joystick/" "icu/" "kde4/" "pulseaudio/" "desktop-directories/" "applications/" "hwinfo/" "scout/" "wicked/" "fonts/" "pki/" "bash/" "man/" "ssl/" "susehelp/" "SuSEfirewall2/" "keyutils/" "hal/" "icons/" "terminfo/" "pci.ids" "awk/" "os-prober/" "zypp/" "themes/" "omc/" "zypper/" "xml/" "p11-kit/" "fontconfig/" "GConf/" "polkit-1/" "kbd/" "cantarell-fonts/" "ntp/" "ghostscript/" "groff/" "appdata/" "alsa/" "systemd/" "fonts-config/" "cracklib/" "getopt/" "apparmor/" "mime/" "usb.ids" "bash-completion/" "xtables/" "info/" "vim/" "system-config-printer/" "autoinstall/" "idnkit/" "tc/" "tabset/" "syslinux/" "PackageKit/" "glib-2.0/" "plymouth/" "YaST2/" "gnupg/" "dbus-1/" "pci.ids.d/" "gnome-background-properties/" "doc/" "misc/" "pkgconfig/" "aclocal/" "X11/" "zsh/" "btrfsmaintenance/" "locale/" "wallpapers/" "gcr-3/" "zoneinfo/" "augeas/" "../" "./")
+
+ ("/usr/share/emacs/" (22130 36633 0 0) "24.3/" "site-lisp/" "../" "./")
+
+ ("/usr/share/emacs/24.3/" (22091 14888 871719 418000) "site-lisp/" "lisp/" "leim/" "etc/" "../" "./")
+
+ ("/usr/share/emacs/24.3/etc/" (22091 14887 535719 474000) "yow.lines" "tutorials/" "themes/" "srecode/" "spook.lines" "sex.6.gz" "ses-example.ses" "schema/" "rgb.txt" "refcards/" "publicsuffix.txt" "ps-prin1.ps" "ps-prin0.ps" "org/" "nxml/" "images/" "grep.txt" "gnus-tut.txt" "gnus/" "future-bug" "forms/" "enriched.doc" "emacs.icon" "emacs-buffer.gdb" "edt-user.el" "echo.msg" "e/" "copying.paper" "condom.1.gz" "compilation.txt" "charsets/" "celibacy.1.gz" "WHY-FREE" "TODO" "THE-GNU-PROJECT" "TERMS" "SERVICE" "README" "PROBLEMS" "ORG-NEWS" "ORDERS" "NXML-NEWS" "NEXTSTEP" "NEWS.23" "NEWS.22" "NEWS.21" "NEWS.20" "NEWS.19" "NEWS.18" "NEWS.1-17" "NEWS" "MOTIVATION" "MORE.STUFF" "MH-E-NEWS" "MAILINGLISTS" "MACHINES" "LINUX-GNU" "JOKES" "INTERVIEW" "HELLO" "GNUS-NEWS" "GNU" "FTP" "ERC-NEWS" "DOC-24.3.1" "DISTRIB" "DEVEL.HUMOR" "DEBUG" "COPYING" "COOKIES" "CONTRIBUTE" "CENSORSHIP" "AUTHORS" "../" "./")
+
+ ("/home/aries/Documents/Diary/" (22160 45041 558716 890000) "#Diary.tex#" ".#Diary.tex" "Diary.tex" "Diary.tex~" "origin.pdf" "origin.toc" "origin.aux" "origin.log" "origin.tex" "Diary.pdf" "_region_.prv/" "missfont.log" "_region_.log" "prv_Diary.log" "_region_.tex" "Diary.aux" "Diary.log" "../" "./")
+
+ ("/home/aries/src/plong/" (22159 45309 298524 380000) "##plong.lisp##" ".##plong.lisp#" "plong.lisp" "plong.asd" "paddle.png" "bip.wav" "ball.png" "README" "LICENSE" ".git/" "../" "./")
+
+ ("/home/aries/.emacs.d/" (22154 45559 485287 674000) "init.el" "image-dired/" "README.md" "emacs_shot.png" "ac-comphist.dat" "auto-save-list/" "semanticdb/" "pde/" "lisp/" "elpa/" "dotconfig/" "abbrev_defs" "Extra/" ".gitignore" ".git/" "../" "./")
+
+ ("/home/aries/src/" (22153 6836 323017 808000) "backup_plong/" "plong/" "perfectstorm/" "4x0ng-linux-0.92/" "4x0ng/" "1x0ng/" "3x0ng/" "xelf/" "../" "./")
+
+ ("/home/aries/src/xelf/" (22123 39248 719057 287000) "xelf.lisp" "xelf.el" "xelf.asd" "todo.org" "standard/" "speech.el" "simple.org" "rgb.lisp" "quadtree.lisp" "prototypes.lisp" "preamble.org" "path.lisp" "obsolete/" "math.lisp" "logic.lisp" "licenses/" "keys.lisp" "generics.lisp" "doc.lisp" "console.lisp" "build-wine.lisp" "build-skyw0r.lisp" "build-sbcl.lisp" "build-ccl.lisp" "build-all.sh" "build-3x0ng.lisp" "build-1x0ng.lisp" "buffers.lisp" "blocks.lisp" "INSTALL" "CREDITS" "COPYING" ".git/" "../" "./")
+
+ ("/home/aries/Downloads/" (22151 39955 870996 531000) "org-tutorial-english/" "org-tutorial-english.zip" "org-mode-chinese-tutorial/" "orgmode-chinese-tutorial.zip" "SoftWarePackages/" "../" "./")
+
+ ("/home/aries/Documents/Hack/language/commonlisp/ansi_commonlisp/" (22151 18995 859265 827000) "chapter11_example.lisp" "chapter11_example.lisp~" "chapter2_example.fasl" "chapter5_example.lisp" "chapter6_example.lisp~" "chapter6_example.lisp" "chapter5_example.lisp~" "chapter4_example.lisp~" "chapter4_example.lisp" "chapter3_exercise.lisp" "chapter3_example.lisp~" "chapter3_example.lisp" "chapter2_exercise.lisp~" "chapter2_exercise.lisp" "chapter2_example.lisp~" "chapter2_example.lisp" "../" "./")
+
+ ("/home/aries/Documents/src/" (22132 5984 443503 810000) "README.md" "Perl/" "Java/" "2015-08-22/" ".gitignore" ".git/" "../" "./")
+
+ ("/home/aries/.config/fcitx/rime/" (22136 2120 478159 174000) "default.custom.yaml" "emoji.userdb/" "emoji.prism.bin" "emoji.reverse.bin" "emoji.table.bin" "emoji.schema.yaml" "luna_pinyin.extended.prism.bin" "luna_pinyin.extended.reverse.bin" "luna_pinyin.extended.table.bin" "wubi86.custom.yaml" "weasel.custom.yaml" "mysymbols.yaml" "double_pinyin_flypy.custom.yaml" "double_pinyin.custom.yaml" "luna_pinyin.cn_en.dict.yaml" "luna_pinyin.poetry.dict.yaml" "luna_pinyin.hanyu.dict.yaml" "luna_pinyin.extended.dict.yaml" "luna_pinyin_simp.custom.yaml" "luna_pinyin.custom.yaml" "squirrel.custom.yaml" "squirrel.custom.yaml~" "default.custom.yaml~" "sync/" "user.yaml" "luna_pinyin.userdb/" "stroke.schema.yaml" "luna_quanpin.schema.yaml" "luna_pinyin_tw.schema.yaml" "luna_pinyin_simp.schema.yaml" "luna_pinyin_fluency.schema.yaml" "cangjie5.schema.yaml" "luna_pinyin.schema.yaml" "stroke.table.bin" "stroke.reverse.bin" "stroke.prism.bin" "luna_quanpin.prism.bin" "luna_pinyin_tw.prism.bin" "luna_pinyin_simp.prism.bin" "luna_pinyin_fluency.prism.bin" "luna_pinyin.table.bin" "luna_pinyin.reverse.bin" "luna_pinyin.prism.bin" "cangjie5.table.bin" "cangjie5.reverse.bin" "cangjie5.prism.bin" "symbols.yaml" "default.yaml" "installation.yaml" ".place_holder" "../" "./")
+
+ ("/home/aries/Documents/Hack/language/latex/" (22134 52813 468269 96000) "Picture/" "newfile/" "doc/" "irc_list/" "Beginner/" ".directory" "Presentation/" "notex/" "kas.png" "../" "./")
+
+ ("/home/aries/Documents/Hack/language/commonlisp/" (22149 9302 283676 419000) "LispGames/" "WhatIsMath/" "syntax_test/" "lisperati.com/" "lisp.plasticki.com/" "quicklisp.lisp.asc" "quicklisp.lisp" "plong/" "practical_commonlisp/" "onlisp/" "ansi_commonlisp/" "A_gentle_introduction/" ".DS_Store" "../" "./")
+
+ ("/home/aries/Documents/Hack/language/" (22141 19620 689712 804000) "latex/" "scheme/" "ruby/" "python/" "perl/" "haskell/" "cpp/" "commonlisp/" "c/" "Shell/" ".DS_Store" "../" "./")
+
+ ("/home/aries/Documents/latex/newfile/" (22134 45811 888120 269000) "newfile.pdf" "newfile.aux" "newfile.log" "newfile.tex" "newfile.tex~" "../" "./")
+
+ ("/home/aries/Documents/latex/Beginner/" (22134 19033 379551 59000) "beginner.tex~" "beginner.tex" "beginner.pdf" "beginner.log" "beginner.dvi" "beginner.aux" "../" "./")
+
+ ("/home/aries/Documents/latex/" (22134 52813 468269 96000) "Picture/" "newfile/" "doc/" "irc_list/" "Beginner/" ".directory" "Presentation/" "notex/" "kas.png" "../" "./")
+
+ ("/home/aries/Documents/latex/Picture/" (22134 53257 48278 524000) ".#picture.tex" "eso-ex1.pdf" "eso-ex1.aux" "eso-ex1.log" "eso-article-test.log" "eso-ex1.tex" "eso-article-test.tex" "face.jpg" "picture.pdf" "picture.aux" "picture.log" "picture.tex" "picture.tex~" "kas.png" "../" "./")
+
+ ("/home/aries/.emacs.d/elpa/" (22133 3952 389816 951000) "cdlatex-readme.txt" "cdlatex-20140707.426/" "auto-complete-auctex-readme.txt" "company-auctex-readme.txt" "latex-preview-pane-readme.txt" "latex-preview-pane-20151023.1303/" "auctex-readme.txt" "popup-20151125.542/" "rainbow-mode-0.12/" "shm-20151126.2333/" "slime-20151213.1142/" "solarized-theme-20151211.535/" "yasnippet-20151212.2133/" "racket-mode-readme.txt" "racket-mode-20151207.1952/" "faceup-20150215.1348/" "scheme-complete-20130220.403/" "scheme-here-20141028.18/" "pretty-lambdada-readme.txt" "pretty-lambdada-20150104.1641/" "ipretty-readme.txt" "pretty-symbols-readme.txt" "shm-20150526.124/" "pkg-info-20150517.443/" "let-alist-1.0.4/" "hyai-20151024.1822/" "hindent-20151025.936/" "hi2-20141005.1231/" "haskell-snippets-20150612.1239/" "haskell-mode-20151025.842/" "haskell-emacs-text-20150713.716/" "haskell-emacs-base-20150714.859/" "haskell-emacs-20151004.1030/" "ghci-completion-20140316.2331/" "ghc-imported-from-20141124.1132/" "flymake-haskell-multi-20130620.422/" "flymake-easy-20140818.55/" "flycheck-haskell-20151010.340/" "flycheck-20151025.2235/" "epl-20150517.433/" "company-20151103.230/" "auto-complete-auctex-20140223.958/" "ac-haskell-process-20150423.702/" "yaxception-20150105.652/" "yasnippet-20150912.1330/" "solarized-theme-20150916.504/" "slime-20150830.1446/" "s-20150924.406/" "rainbow-mode-0.11/" "rainbow-mode-0.11.signed" "rainbow-delimiters-20150320.17/" "rainbow-blocks-20140306.1033/" "python-environment-20150310.153/" "popup-20150626.711/" "paredit-20150217.713/" "org-20150921/" "org-20150921.signed" "nyan-mode-20150128.1218/" "macrostep-20150830.1446/" "log4e-20150105.505/" "jedi-core-20150623.2335/" "jedi-20150623.2335/" "jdee-20151005.1237/" "javadoc-lookup-20150425.1003/" "java-snippets-20140727.2236/" "iedit-20150915.2022/" "icicles-20150920.1145/" "gnupg/" "exec-path-from-shell-20151006.2253/" "epc-20140609.2234/" "emacs-setup-20120727.726/" "emacs-eclim-20150816.220/" "dired+-20150907.2155/" "deferred-20151007.1657/" "dash-20150829.433/" "ctable-20140304.1659/" "concurrent-20150309.2052/" "common-lisp-snippets-20150910.347/" "color-theme-solarized-20150619.1734/" "color-theme-sanityinc-tomorrow-20150803.1419/" "color-theme-sanityinc-solarized-readme.txt" "color-theme-20080305.34/" "avy-20150922.251/" "auto-complete-20150618.1949/" "archives/" "ace-window-20150803.837/" "ac-slime-20150729.2035/" "../" "./")
+
+ ("/home/aries/.emacs.d/elpa/cdlatex-20140707.426/" (22133 3935 129817 673000) "cdlatex.elc" "cdlatex-pkg.elc" "cdlatex-autoloads.el" "cdlatex-autoloads.el~" "cdlatex-pkg.el" "cdlatex.el" "../" "./")
+
+ ("/home/aries/.emacs.d/elpa/auctex-11.89/" (22098 65440 719283 0) "toolbar-x.elc" "toolbar-x.el" "texmathp.elc" "texmathp.el" "tex.elc" "tex.el" "tex-wizard.elc" "tex-wizard.el" "tex-style.elc" "tex-style.el" "tex-site.elc" "tex-site.el" "tex-mik.elc" "tex-mik.el" "tex-jp.elc" "tex-jp.el" "tex-info.elc" "tex-info.el" "tex-font.elc" "tex-font.el" "tex-fold.elc" "tex-fold.el" "tex-buf.elc" "tex-buf.el" "tex-bar.elc" "tex-bar.el" "tests/" "style/" "prv-xemacs.elc" "prv-xemacs.el" "prv-emacs.elc" "prv-emacs.el" "preview.elc" "preview.el" "preview-latex.info" "plain-tex.elc" "plain-tex.el" "multi-prompt.elc" "multi-prompt.el" "latex/" "latex.elc" "latex.el" "images/" "font-latex.elc" "font-latex.el" "doc/" "dir" "context.elc" "context.el" "context-nl.elc" "context-nl.el" "context-en.elc" "context-en.el" "circ.tex" "build-aux/" "bib-cite.elc" "bib-cite.el" "auctex.info" "auctex.elc" "auctex.el" "auctex-pkg.elc" "auctex-pkg.el" "auctex-autoloads.el" "RELEASE" "README.GIT" "README" "GNUmakefile" "ChangeLog.1" "ChangeLog-preview.1" "ChangeLog-preview" "ChangeLog" "COPYING" ".elpaignore" "../" "./")
+
+ ("/home/aries/Documents/Hack/" (22132 5296 835532 568000) "wallpaper/" "unix/" "language/" "algorithm/" "README.md" ".gitignore" ".DS_Store" ".git/" "../" "./")
+
+ ("/home/aries/Documents/Scheme/" (22131 63733 631829 477000) "compiled/" "use.scm" "use.scm~" "quick.scm" "quick.scm~" "../" "./")
+
+ ("/home/aries/Documents/LispGames/ansi_commonlisp/" (22128 3631 361772 60000) "macro_chapter10.lisp" "macro_chapter10.lisp~" "welcome_chapter2.lisp" "welcome_chapter2.lisp~" "../" "./")
+
+ ("/home/aries/Documents/LispGames/" (22126 45520 898032 728000) "ansi_commonlisp/" "lisperati.lisp" "lisperati.lisp~" "quicklisp.lisp.asc" "quicklisp.lisp" "plong/" "../" "./")
+
+ ("/home/aries/Documents/Latex/" (22121 36339 30836 333000) "irc_lisp.synctex.gz" "irc_lisp.fls" "irc_lisp.pdf" "irc_lisp.tex" "irc_lisp.toc" "irc_lisp.log" "irc_lisp.fdb_latexmk" "irc_lisp.aux" "notex.tex" "notex.tex~" "notex.pdf" "kas.png" "notex/" "notex.dvi" "notex.aux" "notex.log" "doc.pdf" "doc.out" "doc.tex" "doc.tex~" "missfont.log" "doc.aux" "doc.log" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
