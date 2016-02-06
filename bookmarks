@@ -5,13 +5,13 @@
 (("hope"
  (filename . "~/.emacs.d/hope/hope")
  (front-context-string)
- (rear-context-string . "ï¼å“ˆå“ˆã€‚å°½é‡å†™å¾—ç‚«é…·ä¸€ç‚¹å‘ã€‚\n\n")
+ (rear-context-string . "£¡¹ş¹ş¡£¾¡Á¿Ğ´µÃìÅ¿áÒ»µãÄÅ¡£\n\n")
  (position . 784))
 ("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string)
  (rear-context-string . "n-on-auto-fill)\n")
- (position . 933))
+ (position . 1210))
 ("Code"
  (filename . "c:/Users/Liu/Documents/Code/")
  (front-context-string . "..\n  drwxrwxrwx ")
