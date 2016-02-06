@@ -7,18 +7,24 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Liu/AppData/Roaming/.emacs.d/.git/"
  "/home/aries/.emacs.d/"
  "/home/aries/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "config"
  "init.el"
  ".emacs"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/Liu/AppData/Roaming/.emacs.d/.git/" (22197 60763 0 0) "refs/" "packed-refs" "ORIG_HEAD" "objects/" "logs/" "info/" "index" "hooks/" "HEAD" "FETCH_HEAD" "description" "config" "COMMIT_EDITMSG" "../" "./")
+
+ ("c:/Users/Liu/AppData/Roaming/.emacs.d/" (22197 60689 0 0) "places" "myOldEmacsPlugin.tar.gz" "init.el~" "init.el" "ido.last" "hope/" "elpa/" "bookmarks" "backups/" "auto-save-list/" ".git/" "../" "./")
+
  ("/home/aries/.emacs.d/" (22197 15083 918205 80000) "./" "backups/" "places" "myOldEmacsPlugin.tar.gz" "auto-save-list/" "../" "init.el" "elpa/" "hope/" ".git/" "init.el~" "bookmarks")
 
  ("/home/aries/" (22197 51409 963948 608000) ".lyrics/" ".directory" "./" "Documents/" "Bin/" ".zcompdump-bogon-5.1.1" ".emacs.d/" ".fonts.conf" ".gnupg/" ".cache/" "Videos/" ".Xresources~" ".gnome2/" ".zshrc.pre-oh-my-zsh" ".Xresources" ".gtkrc-2.0" ".xmind/" ".zcompdump-lonely-5.2" ".fltk/" "Hack/" ".conkyrc~" ".vim/" "etcd1" "IdeaProjects/" ".gimp-2.8/" ".gnuplot_history" ".wxMaxima" ".xfce4-session.verbose-log" ".purple/" ".adobe/" ".xsession-errors" ".jwmrc" ".emacs" ".gnome2_private/" "Templates/" ".mpdconf" ".bash_history" "Cousera/" ".ssh/" ".codeblocks/" ".thunderbird/" ".mozilla/" ".curlrc" ".xinitrc" ".ICEauthority" ".local/" ".xfce4-session.verbose-log.last" ".thumbnails/" ".wmii/" ".ssr/" ".pki/" ".ghc/" ".gstreamer-0.10/" ".face.icon" "bin/" ".fehbg" ".emacs.el~" ".python_history" ".rvmrc" "Downloads/" ".icons/" ".zlogin" ".profile" "../" ".xinitrc~" ".macromedia/" ".audacity-data/" ".oh-my-zsh/" "Mail/" "Public/" ".mldonkey/" ".jwmrc~" ".zcompdump-lonely-5.1.1" ".bashrc~" ".conkyrc" ".gem/" ".esd_auth" ".zshrc" ".xemacs/" ".Xauthority" ".fvwm/" ".devilspie/" ".wicd/" "algs4/" ".fluxbox/" ".octave_hist" ".emacs~" ".zsh-update" ".Skype/" ".viminfo" ".conky/" ".zcompdump-bogon-5.0.8" ".mkshrc" "Desktop/" ".zsh_history" ".slime-history.eld" ".java/" ".gitconfig" ".archey3.cfg" ".racket/" ".links/" ".hardinfo/" ".lesshst" ".cinnamon/" "Wallpapers.tar.gz" ".android/" ".aMule/" ".IdeaIC14/" ".config/" "plugin/" ".slime/" ".zshrc~" ".bash_logout" ".gnome/" ".dbus/" ".ghci" ".#.emacs" ".kde4/" ".xprofile" ".w3m/" ".pekwm/" ".mplayer/" ".bashrc" ".rvm/" ".sunpinyin/" ".tmux.conf" "Work/" ".gemrc" ".swp" ".recently-used" ".moc/" ".dvdcss/" ".temp/" ".bash_profile" ".vnc/" ".kodi/" ".themes/" ".ipython/" "Pictures/")

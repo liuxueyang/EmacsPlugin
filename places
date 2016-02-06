@@ -1,5 +1,6 @@
 ;;; -*- coding: utf-8 -*-
 (("c:/Users/Liu/AppData/Roaming/.emacs.d/init.el" . 1210)
+ ("c:/Users/Liu/AppData/Roaming/.emacs.d/.git/config" . 198)
  ("c:/Users/Liu/Documents/Hello.txt" . 39)
  ("c:/Users/Liu/Documents/Code/"
   (dired-filename . "c:/Users/Liu/Documents/Code/Perl"))
