@@ -41,6 +41,21 @@
 ;; calendar
 (setq calendar-week-start-day 1)
 
+(setq default-fill-column 80)
+
+(global-font-lock-mode t)
+
+(setq default-major-mode 'text-mode)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(show-paren-mode t)
+(setq show-paren-style 'parentheses)
+
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+
 (set-face-attribute 'default (selected-frame) :height 140)
 
 (add-hook 'text-mode-hook 'text-mode-hook-identify)

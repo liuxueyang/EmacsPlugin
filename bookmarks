@@ -12,4 +12,19 @@
  (front-context-string)
  (rear-context-string . "n-on-auto-fill)\n")
  (position . 933))
+("Code"
+ (filename . "c:/Users/Liu/Documents/Code/")
+ (front-context-string . "..\n  drwxrwxrwx ")
+ (rear-context-string . "096 02-06 13:52 ")
+ (position . 187))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string)
+ (rear-context-string . "y-and-date t)\n\n\n")
+ (position . 1069))
+("Hello.txt"
+ (filename . "c:/Users/Liu/Documents/Hello.txt")
+ (front-context-string)
+ (rear-context-string . "Emacs file. :)\n\n")
+ (position . 39))
 )
