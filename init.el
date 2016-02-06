@@ -40,4 +40,10 @@
 
 ;; calendar
 (setq calendar-week-start-day 1)
-					; (calendar)
+
+(set-face-attribute 'default (selected-frame) :height 140)
+
+(add-hook 'text-mode-hook 'text-mode-hook-identify)
+
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
