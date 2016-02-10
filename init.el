@@ -10,7 +10,8 @@
 
 (defvar myPackages
   '(better-defaults
-    material-theme))
+    material-theme
+    lispy))
 
 (mapcar #'(lambda (package)
         (unless (package-installed-p package)
