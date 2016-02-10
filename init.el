@@ -11,7 +11,8 @@
 (defvar myPackages
   '(better-defaults
     material-theme
-    lispy))
+    lispy
+    slime))
 
 (mapcar #'(lambda (package)
         (unless (package-installed-p package)
@@ -57,9 +58,21 @@
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 
-(set-face-attribute 'default (selected-frame) :height 140)
+(set-face-attribute 'default (selected-frame) :height 120)
 
 (add-hook 'text-mode-hook 'text-mode-hook-identify)
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
+;; --------------------
+;; transparent
+(set-frame-parameter (selected-frame) 'alpha '(50 50))
+(add-to-list 'default-frame-alist '(alpha 50 50))
+
+;; lispy-mode
+(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+(add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
+
+ ;; Set your lisp system and, optionally, some contribs
+ (setq inferior-lisp-program "~/bin/clisp")
+ (setq slime-contribs '(slime-fancy))
