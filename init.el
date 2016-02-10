@@ -10,8 +10,7 @@
 
 (defvar myPackages
   '(better-defaults
-    material-theme
-    lispy))
+    material-theme))
 
 (mapcar #'(lambda (package)
         (unless (package-installed-p package)
@@ -42,8 +41,6 @@
 ;; calendar
 (setq calendar-week-start-day 1)
 
-<<<<<<< HEAD
-=======
 (setq default-fill-column 80)
 
 (global-font-lock-mode t)
@@ -59,7 +56,6 @@
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 
->>>>>>> 54d19cdfaa984c9e23b246e3bc29a88259f64a5b
 (set-face-attribute 'default (selected-frame) :height 140)
 
 (add-hook 'text-mode-hook 'text-mode-hook-identify)
