@@ -11,10 +11,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/liu/.emacs.d/"
  "/home/liu/"
  "/home/aries/backup.emacs.d/"
  "/home/liu/backup.emacs.d/"
- "/home/liu/.emacs.d/"
  "/home/liu/Documents/Codeforces/round621/"
  "/home/liu/Documents/LearningGNUEmacs/"
  "/home/liu/Documents/ProgrammingPerl/"
@@ -35,15 +35,15 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/liu/" (22197 56573 58929 236000) ".ido.last" ".emacs.d/" "backup.emacs.d/" ".xfce4-session.verbose-log" ".xfce4-session.verbose-log.last" ".ICEauthority" ".Xauthority" ".zsh_history" ".viminfo" ".vim/" ".racket/" ".kingsoft/" ".emacs~" ".gnu-emacs-custom.el~" ".gnu-emacs-custom~" ".gnu-emacs~" "nohup.out" ".xscreensaver" ".xournal/" ".freeseer/" ".profile" ".profile~" ".compton.conf" ".y2usersettings" ".y2log" ".pki/" ".znc/" ".xdvirc" ".mtpaint" ".gstreamer-0.10/" ".directory" ".tilda/" ".conkyrc" ".xdg_menu_cache/" ".fvwm/" ".e-crashdump.txt" ".Xdefaults" ".e/" ".elementary/" ".lesshst" ".face.icon" ".gimp-2.8/" ".thumbnails/" "Blog/" ".npm/" "my-awesome-site/" ".gem/" ".gemrc" ".ssh/" ".icons/" ".gnupg/" ".macromedia/" ".adobe/" ".xine/" ".mozilla/" ".zshrc" ".zshrc~" ".gnome2_private/" ".gnome2/" ".xsession-errors-:0" ".gtkrc-2.0" ".presage/" ".esd_auth" ".kde4/" ".dbus/" "Videos/" "Pictures/" "Music/" "Documents/" "Public/" "Templates/" "Downloads/" "Desktop/" ".xsession-errors-:1" ".xsession-errors" ".zcompdump-suse-5.0.5" ".bashrc" ".bashrc~" ".cache/" ".zcompdump" ".claws-mail/" ".dvipsrc" ".xemacs/" ".inputrc" ".config/" ".fonts/" ".local/" "bin/" ".xinitrc.template" ".i18n" "public_html/" ".xim.template" ".bash_history" "../" "./")
+ ("/home/liu/.emacs.d/" (22197 56761 626921 349000) "auto-save-list/" "bookmarks" "places" "myOldEmacsPlugin.tar.gz" "init.el" "ido.last" "hope/" "elpa/" "backups/" ".git/" "../" "./")
+
+ ("/home/liu/" (22197 56643 594926 286000) ".ido.last" ".emacs.d/" "backup.emacs.d/" ".xfce4-session.verbose-log" ".xfce4-session.verbose-log.last" ".ICEauthority" ".Xauthority" ".zsh_history" ".viminfo" ".vim/" ".racket/" ".kingsoft/" "nohup.out" ".xscreensaver" ".xournal/" ".freeseer/" ".profile" ".compton.conf" ".y2usersettings" ".y2log" ".pki/" ".znc/" ".xdvirc" ".mtpaint" ".gstreamer-0.10/" ".directory" ".tilda/" ".conkyrc" ".xdg_menu_cache/" ".fvwm/" ".e-crashdump.txt" ".Xdefaults" ".e/" ".elementary/" ".lesshst" ".face.icon" ".gimp-2.8/" ".thumbnails/" "Blog/" ".npm/" "my-awesome-site/" ".gem/" ".gemrc" ".ssh/" ".icons/" ".gnupg/" ".macromedia/" ".adobe/" ".xine/" ".mozilla/" ".zshrc" ".gnome2_private/" ".gnome2/" ".xsession-errors-:0" ".gtkrc-2.0" ".presage/" ".esd_auth" ".kde4/" ".dbus/" "Videos/" "Pictures/" "Music/" "Documents/" "Public/" "Templates/" "Downloads/" "Desktop/" ".xsession-errors-:1" ".xsession-errors" ".zcompdump-suse-5.0.5" ".bashrc" ".cache/" ".zcompdump" ".claws-mail/" ".dvipsrc" ".xemacs/" ".inputrc" ".config/" ".fonts/" ".local/" "bin/" ".xinitrc.template" ".i18n" "public_html/" ".xim.template" ".bash_history" "../" "./")
 
  ("/home/aries/" (22196 45199 631074 560000) ".zsh_history" ".ICEauthority" ".ido.last" ".gphoto/" ".xfce4-session.verbose-log" ".xfce4-session.verbose-log.last" ".Xauthority" ".emacs" ".emacs~" ".emacs.d/" "backup.emacs.d/" ".ido.last~" ".viminfo" ".zshrc" "diary" ".xscreensaver" ".xsession-errors-:2" ".kingsoft/" ".steampid" ".steampath" "mydb/" ".xchat2/" ".spacemacs" "liuxueyang/" ".claws-mail/" ".FontForge/" ".kchmviewer/" "Share/" "VirtualBox VMs/" ".zcompdump-suse-5.0.5" ".zcompdump" ".dropbox-dist/" ".wine/" ".lyrics/" ".pyhistory" ".python_history" ".gitconfig" ".racket/" ".bashrc" "FoxitSoftware/" ".leechcraft/" ".aMule/" ".gtkrc-2.0-kde4" ".gtkrc-2.0" "vimwiki_html/" "vimwiki/" "src/" ".clisprc.lisp" ".sbclrc" "quicklisp/" ".oh-my-zsh/" ".slime-history.eld" ".slime/" ".purple/" ".face.icon" ".gstreamer-0.10/" ".icons/" ".themes/" ".android/" ".TeXworks/" "logs/" ".ghci" ".ghc/" ".xdvirc" ".qtodotxt.cfg" ".xemacs/" "octave-workspace" ".dosemu/" ".gemrc" ".bash_profile" ".TeXmacs/" ".octave_hist" ".rednotebook/" ".gftp/" ".tilda/" ".fonts.conf" ".directory" "GNUstep/" ".xdg_menu_cache/" ".fvwm/" ".lesshst" ".zlogin" ".profile" ".mkshrc" ".elementary/" ".gnome2_private/" ".gnome2/" ".thumbnails/" ".zsh/" ".zsh-update" ".pulse-cookie" ".steam/" ".y2usersettings" ".y2log" ".gem/" ".subversion/" ".rvm/" "Dropbox/" ".dropbox/" ".vim/" ".gnupg/" ".pki/" ".ssh/" ".recently-used" ".macromedia/" ".adobe/" ".xine/" ".presage/" ".mozilla/" ".esd_auth" ".fontconfig/" ".cache/" ".kde4/" ".dbus/" "Videos/" "Pictures/" "Music/" "Documents/" "Public/" "Templates/" "Downloads/" "Desktop/" ".xsession-errors-:0" ".xsession-errors" ".config/" ".fonts/" ".local/" "bin/" ".xinitrc.template" ".i18n" "public_html/" ".xim.template" ".inputrc" ".bash_history" "../" "./")
 
  ("/home/" (22189 39873 243212 689000) "xue/" "liu/" "mydb/" "aries/" "../" "./")
 
  ("/home/liu/backup.emacs.d/" (22197 53654 375051 303000) "init.el" "session.22e8fca3a-f075-493e-89ec-1baa28c81de4" "session.2c29c4f0d-4bb1-4661-a221-8728266728fe" "bookmarks" "auto-save-list/" "places" "backups/" "elpa/" "../" "./")
-
- ("/home/liu/.emacs.d/" (22197 55202 178986 570000) "places" "myOldEmacsPlugin.tar.gz" "init.el~" "init.el" "ido.last" "hope/" "elpa/" "bookmarks" "backups/" ".git/" "../" "./")
 
  ("/home/liu/Documents/LearningGNUEmacs/" (22195 29825 572125 148000) "Todo.txt" "fa_icon.html" "dickens.html" "hello.c" "Makefile" "dickens.c" "dickens.dvi" "dickens.aux" "dickens.log" "dickens.tex" "draw.txt" "../" "./")
 

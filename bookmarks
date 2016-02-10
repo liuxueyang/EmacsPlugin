@@ -10,6 +10,6 @@
 ("Todo.org"
  (filename . "~/Documents/LearningGNUEmacs/Todo.txt")
  (front-context-string)
- (rear-context-string . "。和亲密的人\n相处，更难。\n\n\n")
- (position . 14217))
+ (rear-context-string . "很难受，坐在电脑前面就很难受呢。")
+ (position . 14961))
 )
