@@ -1,5 +1,4 @@
 ;;; -*- coding: utf-8 -*-
-<<<<<<< HEAD
 (("/home/liu/.emacs.d/.git/config" . 133)
  ("/home/liu/.emacs.d/.gitignore" . 39)
  ("/home/liu/.emacs.d/elpa/ace-window-20150803.837/ace-window-autoloads.el" . 1735)
@@ -12,12 +11,3 @@
  ("/home/liu/.emacs.d/elpa/swiper-20160209.847/swiper-autoloads.el" . 2612)
  ("/home/liu/.emacs.d/init.el" . 263)
  ("/home/liu/Documents/LearningGNUEmacs/Todo.txt" . 15495))
-=======
-(("c:/Users/Liu/AppData/Roaming/.emacs.d/init.el" . 1210)
- ("c:/Users/Liu/AppData/Roaming/.emacs.d/.git/config" . 198)
- ("c:/Users/Liu/Documents/Hello.txt" . 39)
- ("c:/Users/Liu/Documents/Code/"
-  (dired-filename . "c:/Users/Liu/Documents/Code/Perl"))
- ("c:/Users/Liu/Documents/Code/Perl/"
-  (dired-filename . "c:/Users/Liu/Documents/Code/Perl/hello.pl")))
->>>>>>> 54d19cdfaa984c9e23b246e3bc29a88259f64a5b
