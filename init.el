@@ -115,6 +115,13 @@
 (add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
 
+(defun conditionally-enable-lispy ()
+  (when (eq this-command 'eval-expression)
+    (lispy-mode 1)
+    (local-set-key "β" 'helm-lisp-completion-at-point)))
+
+(add-hook 'minibuffer-setup-hook 'conditionally-enable-lispy)
+
  ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "~/bin/clisp")
 (setq slime-contribs '(slime-fancy))
