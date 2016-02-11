@@ -32,12 +32,9 @@
 
 ;; (load-theme 'material t)
 
-;; ==============================
-
 (custom-set-variables
  '(delete-selection-mode nil)
  '(tool-bar-mode nil nil (tool-bar)))
-
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -79,7 +76,7 @@
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 
-(set-face-attribute 'default (selected-frame) :height 120)
+(set-face-attribute 'default (selected-frame) :height 130)
 
 (add-hook 'text-mode-hook 'text-mode-hook-identify)
 
@@ -91,8 +88,8 @@
 (add-to-list 'default-frame-alist '(alpha 95 95))
 
 ;; lispy-mode
-(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
 (add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
 
  ;; Set your lisp system and, optionally, some contribs
 (setq inferior-lisp-program "~/bin/clisp")
@@ -100,9 +97,11 @@
 
 ;; rainbow-blocks-mode
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
+(add-hook 'emacs-lisp-mode-hook 'rainbow-blocks-mode)
 
 ;; rainbow-delimiters-mode
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
 ;; solaried-dark theme
 (load-theme 'solarized-dark t)
