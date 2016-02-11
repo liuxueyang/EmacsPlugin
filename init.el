@@ -128,7 +128,7 @@
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
 
 ;; solarized-dark theme
-(load-theme 'solarized-dark t)
+;; ==============================
 
 ;; make the fringe stand out from the background
 (setq solarized-distinct-fringe-background t)
@@ -157,6 +157,10 @@
 (setq solarized-height-plus-2 1)
 (setq solarized-height-plus-3 1)
 (setq solarized-height-plus-4 1)
+
+(load-theme 'solarized-dark t)
+
+;; ==============================
 ;; end of solarized-dark theme
 
 ;; highlight sexp mode
