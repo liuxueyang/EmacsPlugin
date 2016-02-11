@@ -41,6 +41,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ 
  ;; '(rainbow-blocks-depth-1-face ((t (:foreground "SpringGreen4"))))
  ;; '(rainbow-blocks-depth-2-face ((t (:foreground "dark cyan"))))
  ;; '(rainbow-blocks-depth-3-face ((t (:foreground "deep sky blue"))))
@@ -51,15 +52,16 @@
  ;; '(rainbow-blocks-depth-8-face ((t (:foreground "light green"))))
  ;; '(rainbow-blocks-depth-9-face ((t (:foreground "forest green"))))
 
- '(rainbow-blocks-depth-1-face ((t (:foreground "SpringGreen4"))))
- '(rainbow-blocks-depth-2-face ((t (:foreground "dark cyan"))))
- '(rainbow-blocks-depth-3-face ((t (:foreground "deep sky blue"))))
- '(rainbow-blocks-depth-4-face ((t (:foreground "slate blue"))))
- '(rainbow-blocks-depth-5-face ((t (:foreground "medium orchid"))))
- '(rainbow-blocks-depth-6-face ((t (:foreground "indian red"))))
- '(rainbow-blocks-depth-7-face ((t (:foreground "peach puff"))))
- '(rainbow-blocks-depth-8-face ((t (:foreground "light green"))))
- '(rainbow-blocks-depth-9-face ((t (:foreground "forest green"))))
+ '(rainbow-blocks-depth-1-face ((t (:foreground "dark orange"))))
+ '(rainbow-blocks-depth-2-face ((t (:foreground "deep pink"))))
+ '(rainbow-blocks-depth-3-face ((t (:foreground "chartreuse"))))
+ '(rainbow-blocks-depth-4-face ((t (:foreground "deep sky blue"))))
+ '(rainbow-blocks-depth-5-face ((t (:foreground "yellow"))))
+ '(rainbow-blocks-depth-6-face ((t (:foreground "orchid"))))
+ '(rainbow-blocks-depth-7-face ((t (:foreground "spring green"))))
+ '(rainbow-blocks-depth-8-face ((t (:foreground "sienna"))))
+ '(rainbow-blocks-depth-9-face ((t (:foreground "dark magenta"))))
+ 
  '(rainbow-delimiters-depth-1-face ((t (:foreground "dark orange"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "deep pink"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "chartreuse"))))
