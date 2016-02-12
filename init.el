@@ -19,7 +19,8 @@
     rainbow-blocks
     rainbow-delimiters
     solarized-theme
-    highlight-sexp))
+    highlight-sexp
+    multiple-cursors))
 
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
@@ -53,7 +54,8 @@
  ;; '(rainbow-blocks-depth-9-face ((t (:foreground "forest green"))))
 
  '(rainbow-blocks-depth-1-face ((t (:foreground "dark orange"))))
- '(rainbow-blocks-depth-2-face ((t (:foreground "deep pink"))))
+ ;; '(rainbow-blocks-depth-2-face ((t (:foreground "deep pink"))))
+ '(rainbow-blocks-depth-2-face ((t (:foreground "#8b7500"))))
  '(rainbow-blocks-depth-3-face ((t (:foreground "chartreuse"))))
  '(rainbow-blocks-depth-4-face ((t (:foreground "deep sky blue"))))
  '(rainbow-blocks-depth-5-face ((t (:foreground "yellow"))))
@@ -63,7 +65,8 @@
  '(rainbow-blocks-depth-9-face ((t (:foreground "dark magenta"))))
  
  '(rainbow-delimiters-depth-1-face ((t (:foreground "dark orange"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "deep pink"))))
+ ;; '(rainbow-delimiters-depth-2-face ((t (:foreground "deep pink"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#8b7500"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "chartreuse"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "deep sky blue"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "yellow"))))
