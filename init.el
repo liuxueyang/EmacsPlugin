@@ -176,3 +176,6 @@
 ;; highlight sexp mode
 (add-hook 'lisp-mode-hook 'highlight-sexp-mode)
 (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
+
+(put 'downcase-region 'disabled nil)
+;; I usually use this command to read the expanded macro.
