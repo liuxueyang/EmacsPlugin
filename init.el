@@ -103,7 +103,7 @@
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 
-(set-face-attribute 'default (selected-frame) :height 130)
+(set-face-attribute 'default (selected-frame) :height 140)
 
 (add-hook 'text-mode-hook 'text-mode-hook-identify)
 
@@ -126,7 +126,7 @@
 (add-hook 'minibuffer-setup-hook 'conditionally-enable-lispy)
 
  ;; Set your lisp system and, optionally, some contribs
-(setq inferior-lisp-program "~/bin/clisp")
+(setq inferior-lisp-program "~/Bin/clisp")
 (setq slime-contribs '(slime-fancy))
 
 ;; rainbow-blocks-mode
@@ -162,11 +162,11 @@
 (setq solarized-scale-org-headlines nil)
 
 ;; Avoid all font-size changes
-(setq solarized-height-minus-1 1)
-(setq solarized-height-plus-1 1)
-(setq solarized-height-plus-2 1)
-(setq solarized-height-plus-3 1)
-(setq solarized-height-plus-4 1)
+;; (setq solarized-height-minus-1 1)
+;; (setq solarized-height-plus-1 1)
+;; (setq solarized-height-plus-2 1)
+;; (setq solarized-height-plus-3 1)
+;; (setq solarized-height-plus-4 1)
 
 (load-theme 'solarized-dark t)
 
