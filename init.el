@@ -179,3 +179,7 @@
 
 (put 'downcase-region 'disabled nil)
 ;; I usually use this command to read the expanded macro.
+
+(set-face-attribute 'default nil :font "Monospace-17")
+(set-frame-font "Monospace-17" nil t)
+;; change emacs font ;)
