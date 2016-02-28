@@ -180,6 +180,14 @@
 (put 'downcase-region 'disabled nil)
 ;; I usually use this command to read the expanded macro.
 
-(set-face-attribute 'default nil :font "Monospace-17")
-(set-frame-font "Monospace-17" nil t)
-;; change emacs font ;)
+(cond
+ ((eq system-type 'gnu/linux)
+  (set-face-attribute 'default nil :font "Monospace-13")
+  (set-frame-font "Monospace-13" nil t))
+ ((eq system-type 'windows-nt)
+  (set-face-attribute 'default nil :font "Monospace-17")
+  (set-frame-font "Monospace-17" nil t))
+ (t
+  (set-face-attribute 'default nil :font "Monospace-17")
+  (set-frame-font "Monospace-17" nil t)))
+;; change emacs font according to the Operating Linux ;)
