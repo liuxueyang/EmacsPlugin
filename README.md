@@ -16,16 +16,17 @@ git clone https://github.com/liuxueyang/Emacsplugin ~/.emacs.d
 ----
 
 PS:
-        1. 有的时候第一次安装有些插件可能会安装失败，启动的时候会有错误，比如
-        `rainbow-blocks` 这个插件，这个时候就需要输入命令： 
-        `M-x package-list-packages` 然后找到这个包，按 `d` ，然后按 `x`
-        删除这个包，然后重启Emacs，会自动重新安装这个失败的包。一般情况下
-        就没问题了～
 
-        2. Gentoo Linux默认安装的Emacs可能并不能改字体，改一下USE就可以了～ 对于
-        openSUSE Linux、Arch Linux 和Mac OS X亲测都是可以直接使用的 :)
+1. 有的时候第一次安装有些插件可能会安装失败，启动的时候会有错误，比如
+`rainbow-blocks` 这个插件，这个时候就需要输入命令： 
+`M-x package-list-packages` 然后找到这个包，按 `d` ，然后按 `x`
+删除这个包，然后重启Emacs，会自动重新安装这个失败的包。一般情况下
+就没问题了～
 
-        3. Emacs在openSUSE Linux有时候会遇到
+2. Gentoo Linux默认安装的Emacs可能并不能改字体，改一下USE就可以了～ 对于
+openSUSE Linux、Arch Linux 和Mac OS X亲测都是可以直接使用的 :)
+
+3. Emacs在openSUSE Linux有时候会遇到：
 
 ```
 Fatal error 11: Segmentation fault
@@ -73,6 +74,7 @@ Backtrace:
 /usr/bin/emacs[0x55275c]
 ...
 [1]    5320 segmentation fault  emacs README.md
+
 ```
 
 这个嘛，应该是Emacs本身的问题……写东西的时候还是要经常 `C-x C-s` 保存文件，以防
