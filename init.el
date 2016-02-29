@@ -182,8 +182,8 @@
 
 (cond
  ((eq system-type 'gnu/linux)
-  (set-face-attribute 'default nil :font "Monospace-13")
-  (set-frame-font "Monospace-13" nil t))
+  (set-face-attribute 'default nil :font "Monospace-12")
+  (set-frame-font "Monospace-12" nil t))
  ((eq system-type 'windows-nt)
   (set-face-attribute 'default nil :font "Monospace-17")
   (set-frame-font "Monospace-17" nil t))

@@ -7,6 +7,8 @@ Zhen - Yi Jian Setup :joy: :joy: :joy:
 为了愉快地写Lisp系的语言，这是一个简单的配置，安装很简单：
 
 ```
+mkdir ~/Bin
+cd ~/Bin && ln -s `which clisp` clisp
 mv ~/.emacs ~/backup.emacs # 如果~/.emacs这个文件存在的话
 mv ~/.emacs.d ~/backup.emacs.d  # 如果~/.emacs.d这个目录存在的话
 git clone https://github.com/liuxueyang/Emacsplugin ~/.emacs.d
