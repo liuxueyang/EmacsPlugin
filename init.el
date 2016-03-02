@@ -188,6 +188,6 @@
   (set-face-attribute 'default nil :font "Monospace-17")
   (set-frame-font "Monospace-17" nil t))
  (t
-  (set-face-attribute 'default nil :font "Monospace-17")
-  (set-frame-font "Monospace-17" nil t)))
-;; change emacs font according to the Operating Linux ;)
+  (set-face-attribute 'default nil :font "Monospace-20")
+  (set-frame-font "Monospace-20" nil t)))
+;; change emacs font according to the Operating System ;)
