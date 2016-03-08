@@ -20,7 +20,9 @@
     rainbow-delimiters
     solarized-theme
     highlight-sexp
-    multiple-cursors))
+    multiple-cursors
+    geiser
+    guile-scheme))
 
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
@@ -191,3 +193,6 @@
   (set-face-attribute 'default nil :font "Monospace-17")
   (set-frame-font "Monospace-17" nil t)))
 ;; change emacs font according to the Operating Linux ;)
+
+;; scheme
+(setq scheme-program-name "~/Bin/scheme")
