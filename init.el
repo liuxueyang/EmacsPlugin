@@ -119,6 +119,7 @@
 ;; lispy-mode
 (add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+(add-hook 'scheme-mode-hook (lambda () (lispy-mode 1)))
 
 (defun conditionally-enable-lispy ()
   (when (eq this-command 'eval-expression)
@@ -134,10 +135,12 @@
 ;; rainbow-blocks-mode
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-blocks-mode)
+(add-hook 'scheme-mode-hook 'rainbow-blocks-mode)
 
 ;; rainbow-delimiters-mode
 (add-hook 'lisp-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
 ;; solarized-dark theme
 ;; ==============================
@@ -178,6 +181,7 @@
 ;; highlight sexp mode
 (add-hook 'lisp-mode-hook 'highlight-sexp-mode)
 (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
+(add-hook 'scheme-mode-hook 'highlight-sexp-mode)
 
 (put 'downcase-region 'disabled nil)
 ;; I usually use this command to read the expanded macro.
