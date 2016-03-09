@@ -24,7 +24,8 @@
     geiser
     ac-geiser
     guile-scheme
-    pretty-lambdada))
+    pretty-lambdada
+    exec-path-from-shell))
 
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
@@ -230,4 +231,9 @@
   (ome-install 'ac-geiser))
 
 ;; pretty-lambdada
+
 (pretty-lambda-for-modes)
+
+;; exec-path-from-shell
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
