@@ -59,6 +59,12 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;; open compression file
 (setq auto-compression-mode 1)
+;; icicles
+(require 'icicles)
+(icy-mode 1)
+;; menu-bar and tool-bar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 ;; calendar
 (setq calendar-week-start-day 1)
 (setq default-fill-column 80)
