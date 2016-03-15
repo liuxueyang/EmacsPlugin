@@ -9,7 +9,7 @@
 (defvar myPackages
   '(
     ;; better-defaults
-    ;; material-theme
+    material-theme
     icicles
     lispy
     slime
