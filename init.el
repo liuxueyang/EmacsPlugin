@@ -7,8 +7,10 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 (defvar myPackages
-  '(better-defaults
+  '(
+    ;; better-defaults
     ;; material-theme
+    icicles
     lispy
     slime
     rainbow-blocks
@@ -18,7 +20,9 @@
     multiple-cursors
     geiser
     pretty-lambdada
-    exec-path-from-shell))
+    exec-path-from-shell
+    2048-game
+    ))
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
               (package-install package)))
