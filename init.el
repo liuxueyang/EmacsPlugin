@@ -56,7 +56,7 @@
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
 (setq default-major-mode 'text-mode)
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;; open compression file
 (setq auto-compression-mode 1)
 ;; icicles
@@ -67,7 +67,7 @@
 (tool-bar-mode -1)
 ;; calendar
 (setq calendar-week-start-day 1)
-(setq default-fill-column 80)
+;; (setq default-fill-column 80)
 (global-font-lock-mode t)
 (setq default-major-mode 'text-mode)
 (fset 'yes-or-no-p 'y-or-n-p)
