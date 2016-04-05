@@ -8,7 +8,7 @@
   (package-refresh-contents))
 (defvar myPackages
   '(
-    ;; better-defaults
+    better-defaults
     material-theme
     icicles
     lispy
@@ -98,7 +98,7 @@
 (add-hook 'minibuffer-setup-hook 'conditionally-enable-lispy)
 
  ;; Set your lisp system and, optionally, some contribs
-(setq inferior-lisp-program "~/Bin/clisp")
+(setq inferior-lisp-program "~/Bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 
 ;; rainbow-blocks-mode
@@ -144,3 +144,8 @@
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; quicklisp
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+  ;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")
