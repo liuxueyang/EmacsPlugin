@@ -82,8 +82,8 @@
 
 ;; --------------------
 ;; transparent
-(set-frame-parameter (selected-frame) 'alpha '(95 95))
-(add-to-list 'default-frame-alist '(alpha 95 95))
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))
 
 ;; lispy-mode
 (add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
