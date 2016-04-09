@@ -15,13 +15,14 @@
     slime
     rainbow-blocks
     rainbow-delimiters
-    ;; solarized-theme
+    solarized-theme
     highlight-sexp
     multiple-cursors
     geiser
     pretty-lambdada
     exec-path-from-shell
     2048-game
+    molokai-theme
     ))
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
@@ -121,8 +122,8 @@
 
 (cond
  ((eq system-type 'gnu/linux)
-  (set-face-attribute 'default nil :font "Monospace-12")
-  (set-frame-font "Monospace-12" nil t))
+  (set-face-attribute 'default nil :font "Hermit-10")
+  (set-frame-font "Hermit-10" nil t))
  ((eq system-type 'windows-nt)
   (set-face-attribute 'default nil :font "Monospace-17")
   (set-frame-font "Monospace-17" nil t))
@@ -149,3 +150,12 @@
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
   ;; Replace "sbcl" with the path to your implementation
 (setq inferior-lisp-program "sbcl")
+
+;; frame size
+(setq initial-frame-alist
+      '((top . 10)
+        (left . 30)
+        (width . 90)
+        (height . 30)))
+(setq default-frame-alist
+      '((width . 80) (height . 30)))
