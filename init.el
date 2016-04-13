@@ -21,10 +21,12 @@
     exec-path-from-shell
     2048-game
     color-theme-modern
-    auto-complete
-    multi-term
-    solarized-theme
+    auto-complete                       ;autocomplete code
+    multi-term                          ;optimize term
+    solarized-theme                     ;beautiful theme
+    ido-hacks                           ;autocomplete minibuffer better
     ))
+(require 'better-defaults)
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
               (package-install package)))
@@ -67,8 +69,8 @@
 ;; open compression file
 (setq auto-compression-mode 1)
 ;; icicles
-(require 'icicles)
-(icy-mode 1)
+;; (require 'icicles)
+;; (icy-mode 1)
 ;; menu-bar and tool-bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
