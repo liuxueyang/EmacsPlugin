@@ -21,6 +21,7 @@
     exec-path-from-shell
     2048-game
     color-theme-modern
+    auto-complete
     ))
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
