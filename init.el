@@ -22,6 +22,7 @@
     2048-game
     color-theme-modern
     auto-complete
+    multi-term
     ))
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
@@ -166,3 +167,6 @@
       '((width . 80) (height . 30)))
 ;; autocomplete
 (ac-config-default)
+;; multi-term
+(require 'multi-term)
+(setq multi-term-program "/usr/bin/zsh")
