@@ -8,13 +8,17 @@ Zhen - Yi Jian Setup :joy: :joy: :joy:
 
 ```
 mkdir ~/Bin
-cd ~/Bin && ln -s `which clisp` clisp
+cd ~/Bin && ln -s `which sbcl` sbcl
 mv ~/.emacs ~/backup.emacs # 如果~/.emacs这个文件存在的话
 mv ~/.emacs.d ~/backup.emacs.d  # 如果~/.emacs.d这个目录存在的话
 git clone https://github.com/liuxueyang/Emacsplugin ~/.emacs.d
 ```
 
 然后重新启动Emacs就好了～
+
+我的Emacs的截图：
+
+![Emacs](./emacs.png)
 
 ----
 
@@ -80,5 +84,6 @@ Backtrace:
 
 ```
 
-这个嘛，应该是Emacs本身的问题……写东西的时候还是要经常 `C-x C-s` 保存文件，以防
-万一，忍耐一下吧。。。
+这个嘛，应该是Emacs的GTK问题……写东西的时候还是要经常 `C-x C-s` 保存文件，以防
+万一，有一个办法是，用emacs-x11，这样就不会使用GTK。
+
