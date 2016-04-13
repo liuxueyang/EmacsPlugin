@@ -61,7 +61,6 @@
  '(rainbow-delimiters-depth-7-face ((t (:foreground "spring green"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "sienna"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "cyan"))))
- '(rainbow-delimiters-max-face-count 5)
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
 (setq default-major-mode 'text-mode)
@@ -140,7 +139,7 @@
 (setq solarized-distinct-fringe-background t)
 
 ;; Don't change the font for some headings and titles
-(setq solarized-use-variable-pitch nil)
+;; (setq solarized-use-variable-pitch nil)
 
 ;; make the modeline high contrast
 (setq solarized-high-contrast-mode-line t)
@@ -158,11 +157,11 @@
 (setq solarized-scale-org-headlines nil)
 
 ;; Avoid all font-size changes
-(setq solarized-height-minus-1 1)
-(setq solarized-height-plus-1 1)
-(setq solarized-height-plus-2 1)
-(setq solarized-height-plus-3 1)
-(setq solarized-height-plus-4 1)
+;; (setq solarized-height-minus-1 1)
+;; (setq solarized-height-plus-1 1)
+;; (setq solarized-height-plus-2 1)
+;; (setq solarized-height-plus-3 1)
+;; (setq solarized-height-plus-4 1)
 
 (load-theme 'solarized-dark t)
 
