@@ -101,6 +101,18 @@
 (setq inferior-lisp-program "~/Bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 
+;; configure slime
+(add-hook
+ 'slime-connected-hook
+ (lambda ()
+   (when (find-if
+          #'(lambda (buffer)
+              (string=
+               "*inferior-lisp*"
+               (buffer-name buffer)))
+          (buffer-list))
+     (slime-redirect-inferior-output))))
+
 ;; rainbow-blocks-mode
 (add-hook 'lisp-mode-hook 'rainbow-blocks-mode)
 (add-hook 'emacs-lisp-mode-hook 'rainbow-blocks-mode)
