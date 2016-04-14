@@ -36,31 +36,35 @@
 (load-theme 'charcoal-black t t)
 (enable-theme 'charcoal-black)
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(delete-selection-mode nil)
- '(hl-sexp-background-color "gray30"))
+ '(hl-sexp-background-color "gray70"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(rainbow-blocks-depth-1-face ((t (:foreground "dark cyan"))))
- '(rainbow-blocks-depth-2-face ((t (:foreground "dark orange"))))
- '(rainbow-blocks-depth-3-face ((t (:foreground "deep sky blue"))))
- '(rainbow-blocks-depth-4-face ((t (:foreground "OrangeRed2"))))
- '(rainbow-blocks-depth-5-face ((t (:foreground "OliveDrab4"))))
- '(rainbow-blocks-depth-6-face ((t (:foreground "orchid"))))
- '(rainbow-blocks-depth-7-face ((t (:foreground "spring green"))))
- '(rainbow-blocks-depth-8-face ((t (:foreground "sienna"))))
- '(rainbow-blocks-depth-9-face ((t (:foreground "cyan"))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "dark cyan"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "dark orange"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "deep sky blue"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "OrangeRed2"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "OliveDrab4"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "orchid"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "spring green"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "sienna"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "cyan"))))
+ '(rainbow-blocks-depth-1-face ((t (:foreground "red"))))
+ '(rainbow-blocks-depth-2-face ((t (:foreground "orange"))))
+ '(rainbow-blocks-depth-3-face ((t (:foreground "yellow"))))
+ '(rainbow-blocks-depth-4-face ((t (:foreground "green"))))
+ '(rainbow-blocks-depth-5-face ((t (:foreground "cyan"))))
+ '(rainbow-blocks-depth-6-face ((t (:foreground "deep sky blue"))))
+ '(rainbow-blocks-depth-7-face ((t (:foreground "violet"))))
+ '(rainbow-blocks-depth-8-face ((t (:foreground "green yellow"))))
+ '(rainbow-blocks-depth-9-face ((t (:foreground "DarkOrange2"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "orange"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "cyan"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "deep sky blue"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "violet"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "green yellow"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "DarkOrange2"))))
  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
 (setq default-major-mode 'text-mode)
