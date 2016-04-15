@@ -41,21 +41,21 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(delete-selection-mode nil)
- '(hl-sexp-background-color "gray70"))
+ '(hl-sexp-background-color "gray1"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(rainbow-blocks-depth-1-face ((t (:foreground "red"))))
- '(rainbow-blocks-depth-2-face ((t (:foreground "orange"))))
- '(rainbow-blocks-depth-3-face ((t (:foreground "yellow"))))
- '(rainbow-blocks-depth-4-face ((t (:foreground "green"))))
- '(rainbow-blocks-depth-5-face ((t (:foreground "cyan"))))
- '(rainbow-blocks-depth-6-face ((t (:foreground "deep sky blue"))))
- '(rainbow-blocks-depth-7-face ((t (:foreground "violet"))))
- '(rainbow-blocks-depth-8-face ((t (:foreground "green yellow"))))
- '(rainbow-blocks-depth-9-face ((t (:foreground "DarkOrange2"))))
+ '(rainbow-blocks-depth-1-face ((t (:foreground "dark cyan"))))
+ '(rainbow-blocks-depth-2-face ((t (:foreground "dark orange"))))
+ '(rainbow-blocks-depth-3-face ((t (:foreground "deep sky blue"))))
+ '(rainbow-blocks-depth-4-face ((t (:foreground "OrangeRed2"))))
+ '(rainbow-blocks-depth-5-face ((t (:foreground "OliveDrab4"))))
+ '(rainbow-blocks-depth-6-face ((t (:foreground "orchid"))))
+ '(rainbow-blocks-depth-7-face ((t (:foreground "spring green"))))
+ '(rainbow-blocks-depth-8-face ((t (:foreground "sienna"))))
+ '(rainbow-blocks-depth-9-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "orange"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
@@ -185,13 +185,31 @@
 (cond
  ((eq system-type 'gnu/linux)
   (set-face-attribute 'default nil :font "Hermit-10")
-  (set-frame-font "Hermit-10" nil t))
+  (set-frame-font "Hermit-10" nil t)
+  ;; Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "WenQuanYi Zen Hei Mono"
+                                 :size 14))))
  ((eq system-type 'windows-nt)
   (set-face-attribute 'default nil :font "Monospace-17")
-  (set-frame-font "Monospace-17" nil t))
+  (set-frame-font "Monospace-17" nil t)
+  ;; Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "WenQuanYi Zen Hei Mono"
+                                 :size 14))))
  (t
   (set-face-attribute 'default nil :font "Hermit-15")
-  (set-frame-font "Hermit-15" nil t)))
+  (set-frame-font "Hermit-15" nil t)
+  ;; Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "WenQuanYi Zen Hei Mono"
+                                 :size 14)))))
 
 ;; change emacs font according to the Operating System ;)
 ;; scheme
