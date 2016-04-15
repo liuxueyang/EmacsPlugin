@@ -190,8 +190,8 @@
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
-                      (font-spec :family "WenQuanYi Zen Hei Mono"
-                                 :size 14))))
+                      (font-spec :family "Microsoft YaHei"
+                                 :size 15))))
  ((eq system-type 'windows-nt)
   (set-face-attribute 'default nil :font "Monospace-17")
   (set-frame-font "Monospace-17" nil t)
