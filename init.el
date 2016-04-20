@@ -244,3 +244,5 @@
 ;; multi-term
 (require 'multi-term)
 (setq multi-term-program "~/Bin/zsh")
+(add-hook 'term-mode-hook (lambda ()
+                            (define-key term-raw-map (kbd "C-y") 'term-paste)))
