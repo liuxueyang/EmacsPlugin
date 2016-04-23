@@ -246,3 +246,5 @@
 (setq multi-term-program "~/Bin/zsh")
 (add-hook 'term-mode-hook (lambda ()
                             (define-key term-raw-map (kbd "C-y") 'term-paste)))
+;; turn off visible-bell to avoid opaque on Mac OS X. ;-)
+(setq visible-bell nil)
