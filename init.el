@@ -248,3 +248,49 @@
                             (define-key term-raw-map (kbd "C-y") 'term-paste)))
 ;; turn off visible-bell to avoid opaque on Mac OS X. ;-)
 (setq visible-bell nil)
+
+(setq frame-title-format
+      (list
+       (format
+        "%s %%S: %%j "
+        (system-name))
+       '(buffer-file-name
+         "%f"
+         (dired-directory
+          dired-directory
+          "%b"))))
+
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+
+(global-set-key (kbd "C-c <f4>") 'show-file-name)
+(defun xah-copy-file-path (&optional dir-path-only-p)
+  "Copy the current buffer's file path or dired path to `kill-ring'.
+Result is full path.
+If `universal-argument' is called first, copy only the dir path.
+URL `http://ergoemacs.org/emacs/emacs_copy_file_path.html'
+Version 2015-12-02"
+  (interactive "P")
+  (let ((fpath (if (equal major-mode 'dired-mode)
+                    (expand-file-name
+                     default-directory)
+                  (if (null (buffer-file-name))
+                      (user-error
+                       "Current buffer is not associated with a file.")
+                    (buffer-file-name)))))
+    (kill-new
+     (if (null dir-path-only-p)
+         (progn
+           (message
+            "File path copied: 「%s」"
+            fpath)
+           fpath)
+       (progn
+         (message
+          "Directory path copied: 「%s」"
+          (file-name-directory fpath))
+         (file-name-directory fpath))))))
+
+(global-set-key (kbd "C-c <f5>") 'xah-copy-file-path)
