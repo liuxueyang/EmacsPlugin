@@ -194,15 +194,9 @@
     (cond ((string-match-p "openSUSE" distribution)
            (set-face-attribute 'default nil :font "9x18")
            (set-frame-font "9x18" nil t))
-          ((string-match-p "ARCH" distribution)
+          ((string-match-p "Arch" distribution)
            (set-face-attribute 'default nil :font "Hermit-10")
            (set-frame-font "Hermit-10" nil t))))
-  ;; (if (string-match-p "ARCH" operating-system-release)
-  ;;     (progn (set-face-attribute 'default nil :font "Hermit-10")
-  ;;            (set-frame-font "Hermit-10" nil t))
-  ;;   (progn (set-face-attribute 'default nil :font "9x18")
-  ;;          (set-frame-font "9x18" nil t)))
-  ;; it is does not work in emacs-x11 in openSUSE!!!
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
