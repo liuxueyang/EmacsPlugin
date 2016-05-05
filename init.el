@@ -184,10 +184,11 @@
 
 (cond
  ((eq system-type 'gnu/linux)
-  (set-face-attribute 'default nil :font "9x18")
-  (set-frame-font "9x18" nil t)
-  ;; (set-face-attribute 'default nil :font "Hermit-10")
-  ;; (set-frame-font "Hermit-10" nil t)
+  (if (string-match-p "ARCH" operating-system-release)
+      (progn (set-face-attribute 'default nil :font "Hermit-10")
+             (set-frame-font "Hermit-10" nil t))
+    (progn (set-face-attribute 'default nil :font "9x18")
+           (set-frame-font "9x18" nil t)))
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
