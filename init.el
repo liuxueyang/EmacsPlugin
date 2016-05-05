@@ -195,8 +195,8 @@
            (set-face-attribute 'default nil :font "9x18")
            (set-frame-font "9x18" nil t))
           ((string-match-p "Arch" distribution)
-           (set-face-attribute 'default nil :font "Hermit-10")
-           (set-frame-font "Hermit-10" nil t))))
+           (set-face-attribute 'default nil :font "Hermit-12")
+           (set-frame-font "Hermit-12" nil t))))
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
