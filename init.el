@@ -526,6 +526,18 @@ Version 2015-12-02"
   ;; `emms-librefm-scrobbler-password'.
   ;; Future versions will use .authoinfo.gpg.
   )
+(require 'emms-history)
+(emms-history-load)
+(require 'emms-mode-line)
+(emms-mode-line 1)
+(require 'emms-playing-time)
+(emms-playing-time 1)
+(require 'emms-lyrics)
+(emms-lyrics 1)
+(global-set-key (kbd "C-c +") 'emms-volume-mode-plus)
+(global-set-key (kbd "C-c -") 'emms-volume-mode-minus)
+(require 'emms-streams)
+(setq emms-playlist-default-major-mode 'emms-playlist-mode)
 
 ;; org-mode
 (require 'org)
