@@ -12,6 +12,8 @@
     powerline                           ; beautify status line.
     bongo                               ; listen to music
     volume                              ; change audio volume
+    linum-off
+    nyan-mode
     icicles
     lispy
     slime
@@ -36,8 +38,11 @@
         myPackages)
 (setq inhibit-startup-message t)
 (global-linum-mode t)
-(load-theme 'charcoal-black t t)
-(enable-theme 'charcoal-black)
+(setq linum-format "%4d \u2502 ")
+(require 'linum-off)
+
+;; (load-theme 'charcoal-black t t)
+;; (enable-theme 'charcoal-black)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -482,5 +487,49 @@ Version 2015-12-02"
   (remote-term "raspberry-pi" "ssh" "192.168.1.103"))
 
 ;; powerline
-(require 'powerline)
-(powerline-center-theme)
+;; (require 'powerline)
+;; (powerline-center-theme)
+
+;; nyan-mode
+(require 'nyan-mode)
+(add-hook 'scheme-mode-hook (lambda () (nyan-mode 1)))
+(add-hook 'lisp-mode-hook (lambda () (nyan-mode 1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (nyan-mode 1)))
+;; (setf nyan-animate-nyancat t)
+
+;; emms, Emacs Multimedia System
+;; Autoload the id3-browser and bind it to F7.
+;; You can change this to your favorite EMMS interface.
+(autoload 'emms-smart-browse "emms-browser.el" "Browse with EMMS" t)
+(global-set-key [(f7)] 'emms-smart-browse)
+
+(with-eval-after-load 'emms
+  (emms-standard) ;; or (emms-devel) if you want all features
+  (setq emms-source-file-default-directory "~/music"
+        emms-info-asynchronously t
+        emms-show-format "♪ %s")
+
+  ;; Might want to check `emms-info-functions',
+  ;; `emms-info-libtag-program-name',
+  ;; `emms-source-file-directory-tree-function'
+  ;; as well.
+
+  ;; Determine which player to use.
+  ;; If you don't have strong preferences or don't have
+  ;; exotic files from the past (wma) `emms-default-players`
+  ;; is probably all you need.
+  (if (executable-find "mplayer")
+      (setq emms-player-list '(emms-player-mplayer))
+    (emms-default-players))
+
+  ;; For libre.fm see `emms-librefm-scrobbler-username' and
+  ;; `emms-librefm-scrobbler-password'.
+  ;; Future versions will use .authoinfo.gpg.
+  )
+
+;; org-mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
