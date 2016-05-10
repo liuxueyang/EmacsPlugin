@@ -9,6 +9,9 @@
 (defvar myPackages
   '(
     better-defaults
+    powerline                           ; beautify status line.
+    bongo                               ; listen to music
+    volume                              ; change audio volume
     icicles
     lispy
     slime
@@ -477,3 +480,7 @@ Version 2015-12-02"
 (defun open-pi ()
   (interactive) 
   (remote-term "raspberry-pi" "ssh" "192.168.1.103"))
+
+;; powerline
+(require 'powerline)
+(powerline-center-theme)
