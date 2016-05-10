@@ -204,8 +204,8 @@
                       (font-spec :family "Microsoft YaHei"
                                  :size 15))))
  ((eq system-type 'windows-nt)
-  (set-face-attribute 'default nil :font "Monospace-17")
-  (set-frame-font "Monospace-17" nil t)
+  (set-face-attribute 'default nil :font "Hermit-12")
+  (set-frame-font "Hermit-12" nil t)
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
@@ -213,6 +213,8 @@
                       (font-spec :family "WenQuanYi Zen Hei Mono"
                                  :size 14))))
  (t
+  (set-face-attribute 'default nil :font "Hermit-14")
+  (set-frame-font "Hermit-14" nil t)
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
