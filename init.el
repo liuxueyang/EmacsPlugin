@@ -443,3 +443,37 @@ Version 2015-12-02"
  (kbd "C-c a")
  (quote
   thing-copy-parenthesis-to-mark))
+
+;; etags
+;; (setq path-to-ctags "/")
+
+;; fix a small problem for fish
+(add-hook 'term-mode-hook
+          (lambda ()
+            (toggle-truncate-lines)
+            (setq term-prompt-regexp "^.*❯❯❯ ")
+            (make-local-variable 'mouse-yank-at-point)
+            (setq mouse-yank-at-point t)
+            (make-local-variable 'transient-mark-mode)
+            (setq transient-mark-mode nil)
+            (setq yas-dont-activate t)))
+
+;; configure ansi-term
+(defun open-localhost ()
+  (interactive)
+  (ansi-term "zsh" "localhost"))
+
+;; Use this for remote so I can specify command line arguments
+(defun remote-term (new-buffer-name cmd &rest switches)
+  (setq term-ansi-buffer-name (concat "*" new-buffer-name "*"))
+  (setq term-ansi-buffer-name (generate-new-buffer-name term-ansi-buffer-name))
+  (setq term-ansi-buffer-name (apply 'make-term term-ansi-buffer-name cmd nil switches))
+  (set-buffer term-ansi-buffer-name)
+  (term-mode)
+  (term-char-mode)
+  (term-set-escape-char ?\C-x)
+  (switch-to-buffer term-ansi-buffer-name))
+
+(defun open-pi ()
+  (interactive) 
+  (remote-term "raspberry-pi" "ssh" "192.168.1.103"))
