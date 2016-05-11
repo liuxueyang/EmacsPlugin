@@ -14,6 +14,7 @@
     volume                              ; change audio volume
     linum-off
     nyan-mode
+    emms
     icicles
     lispy
     slime
@@ -221,8 +222,8 @@
                       (font-spec :family "WenQuanYi Zen Hei Mono"
                                  :size 14))))
  (t
-  (set-face-attribute 'default nil :font "Hermit-14")
-  (set-frame-font "Hermit-14" nil t)
+  (set-face-attribute 'default nil :font "Hermit-15")
+  (set-frame-font "Hermit-15" nil t)
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
@@ -469,7 +470,7 @@ Version 2015-12-02"
 ;; configure ansi-term
 (defun open-localhost ()
   (interactive)
-  (ansi-term "zsh" "localhost"))
+  (ansi-term "fish" "localhost"))
 
 ;; Use this for remote so I can specify command line arguments
 (defun remote-term (new-buffer-name cmd &rest switches)
