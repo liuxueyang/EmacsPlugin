@@ -470,7 +470,7 @@ Version 2015-12-02"
 ;; configure ansi-term
 (defun open-localhost ()
   (interactive)
-  (ansi-term "fish" "localhost"))
+  (ansi-term "zsh" "localhost"))
 
 ;; Use this for remote so I can specify command line arguments
 (defun remote-term (new-buffer-name cmd &rest switches)
