@@ -538,6 +538,15 @@ Version 2015-12-02"
 (global-set-key (kbd "C-c -") 'emms-volume-mode-minus)
 (require 'emms-streams)
 (setq emms-playlist-default-major-mode 'emms-playlist-mode)
+(defadvice gnus-group-get-new-news (around pause-emms)
+  "Pause emms while Gnus is fetching mails or news."
+  (if emms-player-playing-p
+      (progn (emms-pause)
+             ad-do-it
+             (emms-pause))
+    ad-do-it))
+
+(ad-activate 'gnus-group-get-new-news)
 
 ;; org-mode
 (require 'org)
