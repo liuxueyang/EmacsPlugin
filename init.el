@@ -14,6 +14,7 @@
     volume                              ; change audio volume
     linum-off
     nyan-mode
+    emms
     icicles
     lispy
     slime
@@ -221,8 +222,8 @@
                       (font-spec :family "WenQuanYi Zen Hei Mono"
                                  :size 14))))
  (t
-  (set-face-attribute 'default nil :font "Hermit-14")
-  (set-frame-font "Hermit-14" nil t)
+  (set-face-attribute 'default nil :font "Hermit-15")
+  (set-frame-font "Hermit-15" nil t)
   ;; Chinese Font
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
