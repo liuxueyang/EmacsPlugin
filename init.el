@@ -119,8 +119,6 @@
     (local-set-key "β" 'helm-lisp-completion-at-point)))
 (add-hook 'minibuffer-setup-hook 'conditionally-enable-lispy)
 ;; Set your lisp system and, optionally, some contribs
-
-(setq inferior-lisp-program "~/Bin/sbcl")
 (setq slime-contribs '(slime-fancy))
 
 ;; configure slime
@@ -211,7 +209,9 @@
     (set-fontset-font (frame-parameter nil 'font)
                       charset
                       (font-spec :family "Microsoft YaHei"
-                                 :size 15))))
+                                 :size 15)))
+  ;; Replace "sbcl" with the path to your implementation
+  (setq inferior-lisp-program "sbcl"))
  ((eq system-type 'windows-nt)
   (set-face-attribute 'default nil :font "Hermit-12")
   (set-frame-font "Hermit-12" nil t)
@@ -229,7 +229,9 @@
     (set-fontset-font (frame-parameter nil 'font)
                       charset
                       (font-spec :family "WenQuanYi Zen Hei Mono"
-                                 :size 14)))))
+                                 :size 14)))
+  ;; Replace "sbcl" with the path to your implementation
+  (setq inferior-lisp-program "ccl64")))
 
 ;; change emacs font according to the Operating System ;)
 ;; scheme
@@ -248,8 +250,6 @@
 ;; quicklisp
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
-;; Replace "sbcl" with the path to your implementation
-(setq inferior-lisp-program "sbcl")
 ;; frame size
 
 (setq initial-frame-alist
