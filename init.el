@@ -267,7 +267,7 @@
                       (font-spec :family "WenQuanYi Zen Hei Mono"
                                  :size 14)))
   ;; Replace "sbcl" with the path to your implementation
-  (setq inferior-lisp-program "ccl64")))
+  (setq inferior-lisp-program "sbcl")))
 
 ;; change emacs font according to the Operating System ;)
 ;; scheme
