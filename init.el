@@ -12,6 +12,7 @@
     powerline                           ; beautify status line.
     bongo                               ; listen to music
     volume                              ; change audio volume
+    emojify
     linum-off
     nyan-mode
     emms
@@ -591,3 +592,5 @@ Version 2015-12-02"
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;; emojify
+(add-hook 'after-init-hook #'global-emojify-mode)
