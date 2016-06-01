@@ -609,3 +609,11 @@ Version 2015-12-02"
 (define-key key-translation-map (kbd "<f9> l") (kbd "<"))
 (define-key key-translation-map (kbd "<f9> g") (kbd ">"))
 
+(define-key key-translation-map (kbd "<f8> 1") (kbd "☵"))
+(define-key key-translation-map (kbd "<f8> 2") (kbd "☷"))
+(define-key key-translation-map (kbd "<f8> 3") (kbd "☳"))
+(define-key key-translation-map (kbd "<f8> 4") (kbd "☴"))
+(define-key key-translation-map (kbd "<f8> 6") (kbd "☰"))
+(define-key key-translation-map (kbd "<f8> 7") (kbd "☱"))
+(define-key key-translation-map (kbd "<f8> 8") (kbd "☶"))
+(define-key key-translation-map (kbd "<f8> 9") (kbd "☲"))
