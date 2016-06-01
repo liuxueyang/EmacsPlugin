@@ -594,3 +594,18 @@ Version 2015-12-02"
 
 ;; emojify
 (add-hook 'after-init-hook #'global-emojify-mode)
+
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
+;; set keys to insert math symbol
+(define-key key-translation-map (kbd "<f9> p") (kbd "φ"))
+(define-key key-translation-map (kbd "<f9> x") (kbd "ξ"))
+(define-key key-translation-map (kbd "<f9> i") (kbd "∞"))
+(define-key key-translation-map (kbd "<f9> <right>") (kbd "→"))
+(define-key key-translation-map (kbd "<f9> s") (kbd "∑"))
+(define-key key-translation-map (kbd "<f9> ;") (kbd "⩽"))
+(define-key key-translation-map (kbd "<f9> h") (kbd "⩾"))
+(define-key key-translation-map (kbd "<f9> l") (kbd "<"))
+(define-key key-translation-map (kbd "<f9> g") (kbd ">"))
+
