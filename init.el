@@ -8,30 +8,34 @@
   (package-refresh-contents))
 (defvar myPackages
   '(
-    better-defaults
-    powerline                           ; beautify status line.
-    bongo                               ; listen to music
-    volume                              ; change audio volume
-    emojify
-    linum-off
-    nyan-mode
-    emms
-    icicles
-    lispy
-    slime
-    rainbow-blocks
-    rainbow-delimiters
-    highlight-sexp
-    multiple-cursors
-    geiser
-    pretty-lambdada
-    exec-path-from-shell
-    2048-game
-    color-theme-modern
-    auto-complete                       ;autocomplete code
-    multi-term                          ;optimize term
-    solarized-theme                     ;beautiful theme
-    ido-hacks                           ;autocomplete minibuffer better
+    better-defaults                  ; # 1
+    powerline                        ; # 2 beautify status line.
+    bongo                            ; # 3 listen to music
+    volume                           ; # 4 change audio volume
+    emojify                          ; # 5
+    linum-off                        ; # 6
+    nyan-mode                        ; # 7
+    emms                             ; # 8
+    icicles                          ; # 9
+    lispy                            ; # 10
+    slime                            ; # 11
+    rainbow-blocks                   ; # 12
+    rainbow-delimiters               ; # 13
+    highlight-sexp                   ; # 14
+    multiple-cursors                 ; # 15
+    geiser                           ; # 16
+    pretty-lambdada                  ; # 17
+    exec-path-from-shell             ; # 18
+    2048-game                        ; # 19
+    color-theme-modern               ; # 20
+    auto-complete                    ; # 21 autocomplete code
+    multi-term                       ; # 22 optimize term
+    solarized-theme                  ; # 23 beautiful theme
+    ido-hacks                        ; # 24 autocomplete minibuffer better
+    tabbar-ruler                     ; # 25 a modernised tabbar with ruler
+    fold-this                        ; # 26 Just fold the active region, please.
+    column-marker                    ; # 27 Highlight certain character columns
+    company                          ; # 28 Company is a text completion framework for Emacs.
     ))
 (require 'better-defaults)
 (mapcar #'(lambda (package)
@@ -59,7 +63,7 @@
  ;; If there is more than one, they won't work right.
  '(rainbow-blocks-depth-1-face ((t (:foreground "red"))))
  '(rainbow-blocks-depth-2-face ((t (:foreground "orange"))))
- '(rainbow-blocks-depth-3-face ((t (:foreground "yellow"))))
+ '(rainbow-blocks-depth-3-face ((t (:foreground "blue"))))
  '(rainbow-blocks-depth-4-face ((t (:foreground "green"))))
  '(rainbow-blocks-depth-5-face ((t (:foreground "cyan"))))
  '(rainbow-blocks-depth-6-face ((t (:foreground "deep sky blue"))))
@@ -68,14 +72,17 @@
  '(rainbow-blocks-depth-9-face ((t (:foreground "DarkOrange2"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "red"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "orange"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "yellow"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "blue"))))
  '(rainbow-delimiters-depth-4-face ((t (:foreground "green"))))
  '(rainbow-delimiters-depth-5-face ((t (:foreground "cyan"))))
  '(rainbow-delimiters-depth-6-face ((t (:foreground "deep sky blue"))))
  '(rainbow-delimiters-depth-7-face ((t (:foreground "violet"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "green yellow"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "DarkOrange2"))))
- '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
+ '(rainbow-delimiters-mismatched-face
+   ((t
+     (:inherit rainbow-delimiters-unmatched-face
+               :background "green"))))
  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
 (setq default-major-mode 'text-mode)
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
@@ -127,7 +134,8 @@
   (interactive)
   (transparency-set-initial-value)
    (if (> (frame-parameter nil 'alpha) 0)
-       (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) -2))
+       (set-frame-parameter nil 'alpha
+                            (+ (frame-parameter nil 'alpha) -2))
      (message "This is a minimum value of transparency!")))
 
 (defun transparency-decrease ()
@@ -135,7 +143,8 @@
   (interactive)
   (transparency-set-initial-value)
   (if (< (frame-parameter nil 'alpha) 100)
-      (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) +2))
+      (set-frame-parameter nil 'alpha
+                           (+ (frame-parameter nil 'alpha) +2))
     (message "This is a minimum value of transparency!")))
 
 ;; sample keybinding for transparency manipulation
@@ -198,10 +207,12 @@
 ;; Use more italics
 (setq solarized-use-more-italic t)
 
-;; Use less colors for indicators such as git:gutter, flycheck and similar
+;; Use less colors for indicators such as git:gutter, flycheck
+;; and similar
 (setq solarized-emphasize-indicators nil)
 
-;; Don't change size of org-mode headlines (but keep other size-changes)
+;; Don't change size of org-mode headlines (but keep other
+;; size-changes)
 (setq solarized-scale-org-headlines nil)
 
 ;; Avoid all font-size changes
@@ -211,7 +222,7 @@
 ;; (setq solarized-height-plus-3 1)
 ;; (setq solarized-height-plus-4 1)
 
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; ==============================
 ;; end of solarized-dark theme
@@ -219,7 +230,6 @@
 
 ;; highlight sexp mode
 (add-hook 'lisp-mode-hook 'highlight-sexp-mode)
-
 (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
 (add-hook 'scheme-mode-hook 'highlight-sexp-mode)
 
@@ -478,7 +488,8 @@ Version 2015-12-02"
 
 (defun thing-copy-parenthesis-to-mark (&optional arg)
   " Try to copy a parenthesis and paste it to the mark
-     When used in shell-mode, it will paste parenthesis on shell prompt by default "
+     When used in shell-mode, it will paste parenthesis on shell
+ prompt by default "
   (interactive "P")
   (copy-thing
    'beginning-of-parenthesis
@@ -512,8 +523,10 @@ Version 2015-12-02"
 ;; Use this for remote so I can specify command line arguments
 (defun remote-term (new-buffer-name cmd &rest switches)
   (setq term-ansi-buffer-name (concat "*" new-buffer-name "*"))
-  (setq term-ansi-buffer-name (generate-new-buffer-name term-ansi-buffer-name))
-  (setq term-ansi-buffer-name (apply 'make-term term-ansi-buffer-name cmd nil switches))
+  (setq term-ansi-buffer-name
+        (generate-new-buffer-name term-ansi-buffer-name))
+  (setq term-ansi-buffer-name
+        (apply 'make-term term-ansi-buffer-name cmd nil switches))
   (set-buffer term-ansi-buffer-name)
   (term-mode)
   (term-char-mode)
@@ -528,13 +541,55 @@ Version 2015-12-02"
 ;; (require 'powerline)
 ;; (powerline-center-theme)
 
-;; nyan-mode
+
+;; org-mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;
+;; General Configurations
+;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;
+
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+
+;; set keys to insert math symbol
+(define-key key-translation-map (kbd "<f9> p") (kbd "φ"))
+(define-key key-translation-map (kbd "<f9> x") (kbd "ξ"))
+(define-key key-translation-map (kbd "<f9> i") (kbd "∞"))
+(define-key key-translation-map (kbd "<f9> <right>") (kbd "→"))
+(define-key key-translation-map (kbd "<f9> s") (kbd "∑"))
+(define-key key-translation-map (kbd "<f9> ;") (kbd "⩽"))
+(define-key key-translation-map (kbd "<f9> h") (kbd "⩾"))
+(define-key key-translation-map (kbd "<f9> l") (kbd "<"))
+(define-key key-translation-map (kbd "<f9> g") (kbd ">"))
+
+(define-key key-translation-map (kbd "<f8> 1") (kbd "☵"))
+(define-key key-translation-map (kbd "<f8> 2") (kbd "☷"))
+(define-key key-translation-map (kbd "<f8> 3") (kbd "☳"))
+(define-key key-translation-map (kbd "<f8> 4") (kbd "☴"))
+(define-key key-translation-map (kbd "<f8> 6") (kbd "☰"))
+(define-key key-translation-map (kbd "<f8> 7") (kbd "☱"))
+(define-key key-translation-map (kbd "<f8> 8") (kbd "☶"))
+(define-key key-translation-map (kbd "<f8> 9") (kbd "☲"))
+
+;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;
+;; plugin configurations
+;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;; ;;
+
+;; # 5 emojify
+(add-hook 'after-init-hook #'global-emojify-mode)
+
+;; # 7 nyan-mode
 (require 'nyan-mode)
 (add-hook 'scheme-mode-hook (lambda () (nyan-mode 1)))
 (add-hook 'lisp-mode-hook (lambda () (nyan-mode 1)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (nyan-mode 1)))
 ;; (setf nyan-animate-nyancat t)
 
+;; # 8 emms
 ;; emms, Emacs Multimedia System
 ;; Autoload the id3-browser and bind it to F7.
 ;; You can change this to your favorite EMMS interface.
@@ -583,37 +638,28 @@ Version 2015-12-02"
              ad-do-it
              (emms-pause))
     ad-do-it))
-
 (ad-activate 'gnus-group-get-new-news)
 
-;; org-mode
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+;; # 25 a modernised tabbar with ruler
+(setq tabbar-ruler-global-tabbar t)    ; get tabbar
+(setq tabbar-ruler-global-ruler t)     ; get global ruler
+(setq tabbar-ruler-popup-menu t)       ; get popup menu.
+(setq tabbar-ruler-popup-toolbar t)    ; get popup toolbar
+(setq tabbar-ruler-popup-scrollbar t)  ; show scroll-bar on mouse-move
+(require 'tabbar-ruler)
+(global-set-key (kbd "C-c t") 'tabbar-ruler-move)
 
-;; emojify
-(add-hook 'after-init-hook #'global-emojify-mode)
+;; # 26 Just fold the active region, please.
+(global-set-key (kbd "C-c C-f") 'fold-this-all)
+(global-set-key (kbd "C-c C-F") 'fold-this)
+(global-set-key (kbd "C-c M-f") 'fold-this-unfold-all)
 
-(set-language-environment "UTF-8")
-(set-default-coding-systems 'utf-8)
+;; # 27 column-marker
+(require 'column-marker)
+(add-hook 'lisp-mode-hook (lambda () (interactive) (column-marker-1 80)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (interactive) (column-marker-1 80)))
+(add-hook 'scheme-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
-;; set keys to insert math symbol
-(define-key key-translation-map (kbd "<f9> p") (kbd "φ"))
-(define-key key-translation-map (kbd "<f9> x") (kbd "ξ"))
-(define-key key-translation-map (kbd "<f9> i") (kbd "∞"))
-(define-key key-translation-map (kbd "<f9> <right>") (kbd "→"))
-(define-key key-translation-map (kbd "<f9> s") (kbd "∑"))
-(define-key key-translation-map (kbd "<f9> ;") (kbd "⩽"))
-(define-key key-translation-map (kbd "<f9> h") (kbd "⩾"))
-(define-key key-translation-map (kbd "<f9> l") (kbd "<"))
-(define-key key-translation-map (kbd "<f9> g") (kbd ">"))
+;; # 28 Company is a text completion framework for Emacs.
+(add-hook 'after-init-hook 'global-company-mode)
 
-(define-key key-translation-map (kbd "<f8> 1") (kbd "☵"))
-(define-key key-translation-map (kbd "<f8> 2") (kbd "☷"))
-(define-key key-translation-map (kbd "<f8> 3") (kbd "☳"))
-(define-key key-translation-map (kbd "<f8> 4") (kbd "☴"))
-(define-key key-translation-map (kbd "<f8> 6") (kbd "☰"))
-(define-key key-translation-map (kbd "<f8> 7") (kbd "☱"))
-(define-key key-translation-map (kbd "<f8> 8") (kbd "☶"))
-(define-key key-translation-map (kbd "<f8> 9") (kbd "☲"))
