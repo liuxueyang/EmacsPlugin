@@ -35,7 +35,8 @@
     tabbar-ruler                     ; # 25 a modernised tabbar with ruler
     fold-this                        ; # 26 Just fold the active region, please.
     column-marker                    ; # 27 Highlight certain character columns
-    company                          ; # 28 Company is a text completion framework for Emacs.
+    company           ; # 28 Company is a text completion framework for Emacs.
+    fill-column-indicator               ; # 29
     ))
 (require 'better-defaults)
 (mapcar #'(lambda (package)
@@ -663,3 +664,49 @@ Version 2015-12-02"
 ;; # 28 Company is a text completion framework for Emacs.
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; # 29 fill column indicator
+(setq fci-rule-width 5)
+(setq fci-rule-color "darkblue")
+(add-hook 'after-change-major-mode-hook 'fci-mode)
+(define-globalized-minor-mode global-fci-mode fci-mode
+  (lambda ()
+    (if (and
+         (not (string-match "^\*.*\*$" (buffer-name)))
+         (not (eq major-mode 'dired-mode)))
+        (fci-mode 1))))
+(global-fci-mode 1)
+;; workaround to fix bug when use fci-mode with company
+(defvar-local company-fci-mode-on-p nil)
+
+(defun company-turn-off-fci (&rest ignore)
+  (when (boundp 'fci-mode)
+    (setq company-fci-mode-on-p fci-mode)
+    (when fci-mode (fci-mode -1))))
+
+(defun company-maybe-turn-on-fci (&rest ignore)
+  (when company-fci-mode-on-p (fci-mode 1)))
+
+(add-hook 'company-completion-started-hook 'company-turn-off-fci)
+(add-hook 'company-completion-finished-hook 'company-maybe-turn-on-fci)
+(add-hook 'company-completion-cancelled-hook 'company-maybe-turn-on-fci)
+;; workaround to fix bug when use with auto-complete-mode
+(defun sanityinc/fci-enabled-p () (symbol-value 'fci-mode))
+
+(defvar sanityinc/fci-mode-suppressed nil)
+(make-variable-buffer-local 'sanityinc/fci-mode-suppressed)
+
+(defadvice popup-create (before suppress-fci-mode activate)
+  "Suspend fci-mode while popups are visible"
+  (let ((fci-enabled (sanityinc/fci-enabled-p)))
+    (when fci-enabled
+      (setq sanityinc/fci-mode-suppressed fci-enabled)
+      (turn-off-fci-mode))))
+
+(defadvice popup-delete (after restore-fci-mode activate)
+  "Restore fci-mode when all popups have closed"
+  (when (and sanityinc/fci-mode-suppressed
+             (null popup-instances))
+    (setq sanityinc/fci-mode-suppressed nil)
+    (turn-on-fci-mode)))
+
+;; 
