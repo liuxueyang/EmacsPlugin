@@ -18,7 +18,7 @@ git clone https://github.com/liuxueyang/Emacsplugin ~/.emacs.d
 
 我的Emacs的截图：
 
-![Emacs](./emacs.png)
+![Emacs on Linux](./emacs.png)
 
 ----
 
@@ -92,3 +92,13 @@ Backtrace:
 还是自己编译源程序升级到最新版的24.5吧，有新特性，用了几天，并不会出现上面的问题。
 棒棒哒 :joy::joy:
 
+## Update on 2016/06/14
+
+增加了几个插件，自动补全，最大列提示。
+
+![Emacs on Mac OS X](./emacs-on-mac.png)
+
+### TODO
+
+* 增加一个可以实时预览markdown的插件
+* 让编辑markdown文件更方便的插件
