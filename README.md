@@ -100,5 +100,8 @@ Backtrace:
 
 ### TODO
 
-* 增加一个可以实时预览markdown的插件
-* 让编辑markdown文件更方便的插件
+* DONE 增加一个可以实时预览markdown的插件
+  CLOSED: [2016-06-14 Tue 08:57]
+* DONE 让编辑markdown文件更方便的插件
+  CLOSED: [2016-06-14 Tue 08:57]
+

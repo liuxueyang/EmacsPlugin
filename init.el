@@ -35,8 +35,10 @@
     tabbar-ruler                     ; # 25 a modernised tabbar with ruler
     fold-this                        ; # 26 Just fold the active region, please.
     column-marker                    ; # 27 Highlight certain character columns
-    company           ; # 28 Company is a text completion framework for Emacs.
+    company             ; # 28 Company is a text completion framework for Emacs.
     fill-column-indicator               ; # 29
+    websocket                           ; # 30 Emacs WebSocket client and server
+    markdown-preview-mode               ; # 32 markdown realtime preview minor mode.
     ))
 (require 'better-defaults)
 (mapcar #'(lambda (package)
