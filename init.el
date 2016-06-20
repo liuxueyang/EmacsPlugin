@@ -1,3 +1,7 @@
+;; ==============================
+;; General configuration
+;; ==============================
+
 (require 'package)
 (add-to-list 'package-archives 
              '("melpa" . "http://melpa.org/packages/"))
@@ -40,6 +44,13 @@
     websocket                           ; # 30 Emacs WebSocket client and server
     markdown-preview-mode               ; # 32 markdown realtime preview minor mode.
     ))
+
+;; ------------------------------
+
+;; ==============================
+;; Package configurations
+;; ==============================
+
 (require 'better-defaults)
 (mapcar #'(lambda (package)
             (unless (package-installed-p package)
