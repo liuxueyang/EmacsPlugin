@@ -1,0 +1,11 @@
+(setq use-spacemacs t)   ; or nil 
+;; (require 'package)
+;; (add-to-list 'package-archives
+;;              '("marmalade" .
+;;                "http://marmalade-repo.org/packages/") t)
+
+;; defaults to ~/.emacs.d/
+(when use-spacemacs
+  (setq user-emacs-directory "~/.spacemacs.d/"))
+
+(load (expand-file-name "init.el" user-emacs-directory))
