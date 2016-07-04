@@ -105,3 +105,16 @@ Backtrace:
 * DONE 让编辑markdown文件更方便的插件
   CLOSED: [2016-06-14 Tue 08:57]
 
+## Update on 2016/07/04
+
+增加dotspacemacs和dotemacs文件。通过
+
+```
+cd ~
+mv .emacs dotemacs-backup
+mv .spacemacs dotemacs-backup
+ln -s .emacs.d/dotemacs .emacs
+ln -s .emacs.d/dotspacemacs .spacemacs
+```
+
+来让自己原来的Emacs配置和Spacemacs共存。想要切换只需要修改dotemacs文件就可以了。
