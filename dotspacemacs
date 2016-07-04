@@ -107,6 +107,7 @@ values."
    ;; with 2 themes variants, one dark and one light)
    ;; use <SPC> T h to select other themes
    dotspacemacs-themes '(
+                         sunny-day
                          default
                          eclipse
                          twilight-bright
@@ -269,7 +270,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 (defun extra-set-lisp-hook ()
   (extra-set-general-hook)
   (lispy-mode 1)
-  (rainbow-blocks-mode)
+  (rainbow-blocks-mode 1)
+  (rainbow-delimiters-mode 1)
   (highlight-sexp-mode 1))
 (defun customize-my-face ()
   ;; use list-colors-display function to get color name
@@ -320,10 +322,9 @@ you should place your code here."
    dotspacemacs-configuration-layers
    '((c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
-     (auto-completion :disabled-for org)))
-  (setq-default
-   dotspacemacs-configuration-layers
-   '((c-c++ :variables c-c++-enable-clang-support t)))
+     (auto-completion :disabled-for org)
+     (c-c++ :variables c-c++-enable-clang-support t)
+     (shell :variables shell-default-term-shell "/bin/bash")))
   ;; Bind clang-format-region to C-M-tab in all modes:
   (global-set-key [C-M-tab] 'clang-format-region)
   ;; Bind clang-format-buffer to tab on the c++-mode only:
@@ -341,8 +342,7 @@ you should place your code here."
   (spacemacs//set-monospaced-font
    "Source Code Pro"
    ;; "Hermit"
-   "Hiragino Sans GB" 14 16)
-  )
+   "Hiragino Sans GB" 14 16))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -351,7 +351,8 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(hl-sexp-background-color "light goldenrod yellow"))
+ '(hl-sexp-background-color "light goldenrod yellow")
+ '(rainbow-delimiters-max-face-count 5))
 ;; (custom-set-faces
 ;;  ;; custom-set-faces was added by Custom.
 ;;  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -364,7 +365,7 @@ you should place your code here."
 ;;  '(rainbow-blocks-depth-3-face ((t (:foreground "Brown"))))
 ;;  '(rainbow-blocks-depth-4-face ((t (:foreground "Blue"))))
 ;;  '(rainbow-blocks-depth-5-face ((t (:foreground "Black"))))
-;;  '(rainbow-blocks-depth-6-face ((t (:foreground "dark slate gray"))))
+;;  '(rainbow-blocks-depth-6-face ((t (:foreground "Red"))))
 ;;  '(rainbow-blocks-depth-7-face ((t (:foreground "SlateBlue4"))))
 ;;  '(rainbow-blocks-depth-8-face ((t (:foreground "green4"))))
 ;;  '(rainbow-blocks-depth-9-face ((t (:foreground "VioletRed3"))))
@@ -373,10 +374,37 @@ you should place your code here."
 ;;  '(rainbow-delimiters-depth-3-face ((t (:foreground "Brown"))))
 ;;  '(rainbow-delimiters-depth-4-face ((t (:foreground "Blue"))))
 ;;  '(rainbow-delimiters-depth-5-face ((t (:foreground "Black"))))
-;;  '(rainbow-delimiters-depth-6-face ((t (:foreground "dark slate
-;;   gray"))))
+;;  '(rainbow-delimiters-depth-6-face ((t (:foreground "Red"))))
 ;;  '(rainbow-delimiters-depth-7-face ((t (:foreground "SlateBlue4"))))
 ;;  '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
 ;;  '(rainbow-delimiters-depth-9-face ((t (:foreground "VioletRed3"))))
 ;;  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
 ;;  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(rainbow-blocks-depth-1-face ((t (:foreground "Red"))))
+ '(rainbow-blocks-depth-2-face ((t (:foreground "Purple"))))
+ '(rainbow-blocks-depth-3-face ((t (:foreground "Brown"))))
+ '(rainbow-blocks-depth-4-face ((t (:foreground "Blue"))))
+ '(rainbow-blocks-depth-5-face ((t (:foreground "Black"))))
+ '(rainbow-blocks-depth-6-face ((t (:foreground "dark slate gray"))))
+ '(rainbow-blocks-depth-7-face ((t (:foreground "SlateBlue4"))))
+ '(rainbow-blocks-depth-8-face ((t (:foreground "green4"))))
+ '(rainbow-blocks-depth-9-face ((t (:foreground "VioletRed3"))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "Red"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "Purple"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "Brown"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "Blue"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "Black"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "dark slate
+  gray"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "SlateBlue4"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "VioletRed3"))))
+ '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
+ '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
