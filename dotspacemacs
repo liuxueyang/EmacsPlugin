@@ -27,12 +27,15 @@ values."
      better-defaults
      emacs-lisp
      git
+     gtags
+     latex
      markdown
      org
      osx
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     ;; pdf-tools
      spell-checking
      syntax-checking
      version-control
@@ -50,7 +53,8 @@ values."
                                       rainbow-blocks
                                       multiple-cursors
                                       ;; highlight-sexp
-                                      (highlight-sexp :location (recipe :fetcher github :repo "daimrod/highlight-sexp")))
+                                      (highlight-sexp :location
+                                                      (recipe :fetcher github :repo "daimrod/highlight-sexp")))
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -107,25 +111,27 @@ values."
    ;; with 2 themes variants, one dark and one light)
    ;; use <SPC> T h to select other themes
    dotspacemacs-themes '(
-                         sunny-day
-                         default
-                         eclipse
-                         twilight-bright
-                         wilson
-                         professional
-                         sanityinc-solarized-dark
-                         spacemacs-dark
-                         spacemacs-light
-                         solarized-light
-                         solarized-dark
-                         leuven
+                         ;; sunny-day
+                         ;; default
+                         ;; eclipse
+                         ;; twilight-bright
+                         ;; wilson
+                         ;; professional
+                         ;; sanityinc-solarized-dark
+                         ;; spacemacs-dark
+                         ;; spacemacs-light
+                         ;; solarized-light
+                         ;; solarized-dark
+                         ;; leuven
                          monokai
-                         zenburn)
+                         ;; zenburn
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hermit"
+   dotspacemacs-default-font '(
+                               "Hermit"
                                ;; "Source Code Pro"
                                :size 13
                                :weight normal
@@ -273,36 +279,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (rainbow-blocks-mode 1)
   (rainbow-delimiters-mode 1)
   (highlight-sexp-mode 1))
-(defun customize-my-face ()
-  ;; use list-colors-display function to get color name
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(rainbow-blocks-depth-1-face ((t (:foreground "Red"))))
-   '(rainbow-blocks-depth-2-face ((t (:foreground "Purple"))))
-   '(rainbow-blocks-depth-3-face ((t (:foreground "Brown"))))
-   '(rainbow-blocks-depth-4-face ((t (:foreground "Blue"))))
-   '(rainbow-blocks-depth-5-face ((t (:foreground "Black"))))
-   '(rainbow-blocks-depth-6-face ((t (:foreground "dark slate gray"))))
-   '(rainbow-blocks-depth-7-face ((t (:foreground "SlateBlue4"))))
-   '(rainbow-blocks-depth-8-face ((t (:foreground "green4"))))
-   '(rainbow-blocks-depth-9-face ((t (:foreground "VioletRed3"))))
-   '(rainbow-delimiters-depth-1-face ((t (:foreground "Red"))))
-   '(rainbow-delimiters-depth-2-face ((t (:foreground "Purple"))))
-   '(rainbow-delimiters-depth-3-face ((t (:foreground "Brown"))))
-   '(rainbow-delimiters-depth-4-face ((t (:foreground "Blue"))))
-   '(rainbow-delimiters-depth-5-face ((t (:foreground "Black"))))
-   '(rainbow-delimiters-depth-6-face ((t (:foreground "dark slate
-  gray"))))
-   '(rainbow-delimiters-depth-7-face ((t (:foreground "SlateBlue4"))))
-   '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
-   '(rainbow-delimiters-depth-9-face ((t (:foreground "VioletRed3"))))
-   '(rainbow-delimiters-mismatched-face
-     ((t (:inherit rainbow-delimiters-unmatched-face
-                   :background "green"))))
-   '(rainbow-delimiters-unmatched-face ((t (:background "yellow"))))))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -317,7 +293,6 @@ you should place your code here."
   (add-hook 'c-mode-hook 'extra-set-general-hook)
   (add-hook 'c++-mode-hook 'extra-set-general-hook)
   (add-hook 'perl-mode-hook 'extra-set-general-hook)
-  (customize-my-face)
   (setq-default
    dotspacemacs-configuration-layers
    '((c-c++ :variables
@@ -340,9 +315,29 @@ you should place your code here."
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
   ;; configure chinese layer
   (spacemacs//set-monospaced-font
-   "Source Code Pro"
-   ;; "Hermit"
-   "Hiragino Sans GB" 14 16))
+   ;; "Source Code Pro"
+   "Hermit"
+   "Hiragino Sans GB" 14 16)
+  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  ;;LaTex
+  (add-hook
+   'LaTeX-mode-hook
+   (lambda ()
+     (setq TeX-auto-untabify
+           t
+                                        ; remove all tabs before saving
+           TeX-engine
+           'xetex
+                                        ; use xelatex default
+           TeX-show-compilation
+           t)
+                                        ; display compilation windows
+     (TeX-global-PDF-mode t)
+                                        ; PDF mode enable, not plain
+     (setq TeX-save-query nil)
+     (imenu-add-menubar-index)
+     (define-key LaTeX-mode-map (kbd "TAB")
+       'TeX-complete-symbol))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -351,60 +346,55 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(hl-sexp-background-color "light goldenrod yellow")
- '(rainbow-delimiters-max-face-count 5))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
-;;  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
-;;  '(rainbow-blocks-depth-1-face ((t (:foreground "Red"))))
-;;  '(rainbow-blocks-depth-2-face ((t (:foreground "Purple"))))
-;;  '(rainbow-blocks-depth-3-face ((t (:foreground "Brown"))))
-;;  '(rainbow-blocks-depth-4-face ((t (:foreground "Blue"))))
-;;  '(rainbow-blocks-depth-5-face ((t (:foreground "Black"))))
-;;  '(rainbow-blocks-depth-6-face ((t (:foreground "Red"))))
-;;  '(rainbow-blocks-depth-7-face ((t (:foreground "SlateBlue4"))))
-;;  '(rainbow-blocks-depth-8-face ((t (:foreground "green4"))))
-;;  '(rainbow-blocks-depth-9-face ((t (:foreground "VioletRed3"))))
-;;  '(rainbow-delimiters-depth-1-face ((t (:foreground "Red"))))
-;;  '(rainbow-delimiters-depth-2-face ((t (:foreground "Purple"))))
-;;  '(rainbow-delimiters-depth-3-face ((t (:foreground "Brown"))))
-;;  '(rainbow-delimiters-depth-4-face ((t (:foreground "Blue"))))
-;;  '(rainbow-delimiters-depth-5-face ((t (:foreground "Black"))))
-;;  '(rainbow-delimiters-depth-6-face ((t (:foreground "Red"))))
-;;  '(rainbow-delimiters-depth-7-face ((t (:foreground "SlateBlue4"))))
-;;  '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
-;;  '(rainbow-delimiters-depth-9-face ((t (:foreground "VioletRed3"))))
-;;  '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
-;;  '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
-(custom-set-faces
+ '(hl-sexp-background-color "gray19")
+ '(rainbow-delimiters-max-face-count 9))
+
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(rainbow-blocks-depth-1-face ((t (:foreground "Red"))))
- '(rainbow-blocks-depth-2-face ((t (:foreground "Purple"))))
- '(rainbow-blocks-depth-3-face ((t (:foreground "Brown"))))
- '(rainbow-blocks-depth-4-face ((t (:foreground "Blue"))))
- '(rainbow-blocks-depth-5-face ((t (:foreground "Black"))))
- '(rainbow-blocks-depth-6-face ((t (:foreground "dark slate gray"))))
- '(rainbow-blocks-depth-7-face ((t (:foreground "SlateBlue4"))))
- '(rainbow-blocks-depth-8-face ((t (:foreground "green4"))))
- '(rainbow-blocks-depth-9-face ((t (:foreground "VioletRed3"))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "Red"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "Purple"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "Brown"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "Blue"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "Black"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "dark slate
-  gray"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "SlateBlue4"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "green4"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "VioletRed3"))))
- '(rainbow-delimiters-mismatched-face ((t (:inherit rainbow-delimiters-unmatched-face :background "green"))))
- '(rainbow-delimiters-unmatched-face ((t (:background "yellow")))))
+ (custom-set-faces
+  '(rainbow-blocks-depth-1-face
+    ((t (:foreground "White"))))
+  '(rainbow-delimiters-depth-1-face
+    ((t (:foreground "White"))))
+  '(rainbow-blocks-depth-2-face
+    ((t (:foreground "Red"))))
+  '(rainbow-delimiters-depth-2-face
+    ((t (:foreground "Red"))))
+  '(rainbow-blocks-depth-3-face
+    ((t (:foreground "Purple"))))
+  '(rainbow-delimiters-depth-3-face
+    ((t (:foreground "Purple"))))
+  '(rainbow-blocks-depth-4-face
+    ((t (:foreground "Orange"))))
+  '(rainbow-delimiters-depth-4-face
+    ((t (:foreground "Orange"))))
+  '(rainbow-blocks-depth-5-face
+    ((t (:foreground "Green"))))
+  '(rainbow-delimiters-depth-5-face
+    ((t (:foreground "Green"))))
+  '(rainbow-blocks-depth-6-face
+    ((t
+      (:foreground "Brown"))))
+  '(rainbow-delimiters-depth-6-face
+    ((t
+      (:foreground "Brown"))))
+  '(rainbow-blocks-depth-7-face
+    ((t (:foreground "magenta2"))))
+  '(rainbow-delimiters-depth-7-face
+    ((t (:foreground "magenta2"))))
+  '(rainbow-blocks-depth-8-face
+    ((t (:foreground "weat1"))))
+  '(rainbow-delimiters-depth-8-face
+    ((t (:foreground "weat1"))))
+  '(rainbow-blocks-depth-9-face
+    ((t (:foreground "hkaki1"))))
+  '(rainbow-delimiters-depth-9-face
+    ((t (:foreground "hkaki1"))))
+  '(rainbow-delimiters-mismatched-face
+    ((t
+      (:inherit rainbow-delimiters-unmatched-face
+                :background "green"))))
+  '(rainbow-delimiters-unmatched-face
+    ((t (:background "yellow")))))
