@@ -20,6 +20,9 @@ git clone https://github.com/liuxueyang/Emacsplugin ~/.emacs.d
 
 ![Emacs on Linux](./emacs.png)
 
+我的Spacemacs截图: 
+![Spacemacs on OS X El](./spacemacs-on-mac.png)
+
 ----
 
 PS:
@@ -118,3 +121,7 @@ ln -s .emacs.d/dotspacemacs .spacemacs
 ```
 
 来让自己原来的Emacs配置和Spacemacs共存。想要切换只需要修改dotemacs文件就可以了。
+
+## Update on 2016/08/01
+
+修改Rainbow-blocks和Rainbow-delimiters的配色等等

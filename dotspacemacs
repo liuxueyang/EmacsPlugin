@@ -307,7 +307,7 @@ you should place your code here."
   (defun clang-format-bindings ()
     (define-key c++-mode-map [tab] 'clang-format-buffer))
   ;; common-lisp layer
-  (setq inferior-lisp-program "sbcl")
+  (setq inferior-lisp-program "clisp")
   ;; package multiple-cursors
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -363,9 +363,9 @@ you should place your code here."
   '(rainbow-delimiters-depth-2-face
     ((t (:foreground "Red"))))
   '(rainbow-blocks-depth-3-face
-    ((t (:foreground "Purple"))))
+    ((t (:foreground "purple1"))))
   '(rainbow-delimiters-depth-3-face
-    ((t (:foreground "Purple"))))
+    ((t (:foreground "purple1"))))
   '(rainbow-blocks-depth-4-face
     ((t (:foreground "Orange"))))
   '(rainbow-delimiters-depth-4-face
@@ -385,9 +385,9 @@ you should place your code here."
   '(rainbow-delimiters-depth-7-face
     ((t (:foreground "magenta2"))))
   '(rainbow-blocks-depth-8-face
-    ((t (:foreground "weat1"))))
+    ((t (:foreground "gold1"))))
   '(rainbow-delimiters-depth-8-face
-    ((t (:foreground "weat1"))))
+    ((t (:foreground "gold1"))))
   '(rainbow-blocks-depth-9-face
     ((t (:foreground "hkaki1"))))
   '(rainbow-delimiters-depth-9-face
