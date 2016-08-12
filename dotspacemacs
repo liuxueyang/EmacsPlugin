@@ -87,7 +87,7 @@ values."
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
    ;; unchanged. (default 'vim)
-   dotspacemacs-editing-style 'emacs
+   dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -131,9 +131,9 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '(
-                               "Hermit"
-                               ;; "Source Code Pro"
-                               :size 13
+                               ;; "Hermit"
+                               "Source Code Pro"
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -307,7 +307,7 @@ you should place your code here."
   (defun clang-format-bindings ()
     (define-key c++-mode-map [tab] 'clang-format-buffer))
   ;; common-lisp layer
-  (setq inferior-lisp-program "clisp")
+  (setq inferior-lisp-program "sbcl")
   ;; package multiple-cursors
   (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
@@ -315,8 +315,8 @@ you should place your code here."
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
   ;; configure chinese layer
   (spacemacs//set-monospaced-font
-   ;; "Source Code Pro"
-   "Hermit"
+   "Source Code Pro"
+   ;; "Hermit"
    "Hiragino Sans GB" 14 16)
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
   ;;LaTex
@@ -389,9 +389,9 @@ you should place your code here."
   '(rainbow-delimiters-depth-8-face
     ((t (:foreground "gold1"))))
   '(rainbow-blocks-depth-9-face
-    ((t (:foreground "hkaki1"))))
+    ((t (:foreground "OliveDrab1"))))
   '(rainbow-delimiters-depth-9-face
-    ((t (:foreground "hkaki1"))))
+    ((t (:foreground "OliveDrab1"))))
   '(rainbow-delimiters-mismatched-face
     ((t
       (:inherit rainbow-delimiters-unmatched-face
